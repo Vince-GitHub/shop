@@ -1,0 +1,152 @@
+<extend name="Public:layout" />
+<block name="main">
+    <link href="__PUBLIC__/Home/History/css/ResourceHandler_005.css" rel="stylesheet" type="text/css">
+    <link href="__PUBLIC__/Home/History/css/ResourceHandler_002.css" rel="Stylesheet" type="text/css">
+    <link href="__PUBLIC__/Home/History/css/ResourceHandler.css" rel="Stylesheet" type="text/css">
+    <link href="__PUBLIC__/Home/History/css/ResourceHandler_006.css" rel="Stylesheet" type="text/css">
+    <link href="__PUBLIC__/Home/History/css/ResourceHandler_007.css" rel="Stylesheet" type="text/css">
+    <!-- end head css -->
+    <!-- 自定义CSS-->
+    <script type="text/javascript">
+
+        var browser = {
+            versions: function () {
+                var u = navigator.userAgent, app = navigator.appVersion;
+                return {//移动终端浏览器版本信息 
+                    trident: u.indexOf('Trident') > -1, //IE内核
+                    presto: u.indexOf('Presto') > -1, //opera内核
+                    webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+                    gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+                    mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+                    ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+                    android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器
+                    iPhone: u.indexOf('iPhone') > -1 || u.indexOf('Mac') > -1, //是否为iPhone或者QQHD浏览器
+                    iPad: u.indexOf('iPad') > -1, //是否iPad
+                    webApp: u.indexOf('Safari') == -1 //是否web应该程序，没有头部与底部
+                };
+            } (),
+            language: (navigator.browserLanguage || navigator.language).toLowerCase()
+        }
+
+       
+        
+        //document.writeln(window.location.pathname.toLowerCase());
+        if (browser.versions.mobile && !browser.versions.iPad) {
+            var returnUrl = "m.shangpin.com";
+            var tmpCurrentUrl = window.location.href.toLowerCase();
+            var pathname = window.location.pathname.toLowerCase();
+            if (pathname == "/women") {
+                returnUrl = "m.shangpin.com";
+                window.location.href = "http://" + returnUrl;
+            }
+            //跳转到首页
+            if (pathname == "" || pathname == null || pathname == "/" || pathname == undefined) {
+                window.location.href = "http://" + returnUrl;
+            }
+
+
+            //
+            if (pathname == "/ifc") {
+                returnUrl = "m.shangpin.com/ifc";
+                window.location.href = "http://" + returnUrl;
+            }
+            //
+            if (pathname.indexOf("/product/") > -1) {
+                var result = /product\/(\d+)/.exec(pathname);
+                if (result != "") {
+                    window.location.href = "" + result[1];
+                }
+            }
+            //
+            if (pathname.indexOf("/subject/") > -1) {               
+                var result=/subject\/(\d+)/.exec(pathname);
+                if(result!=""){                    
+                    window.location.href = "" + result[1];                 
+                }
+            }
+            //
+            if (pathname.indexOf("/brand/topshop") > -1) {
+                window.location.href = "";                
+            }
+            //
+            if (pathname == "/account") {
+                returnUrl = "m.shangpin.com/accountaction!info";
+                window.location.href = "http://" + returnUrl;
+            }
+            if (pathname == "/trade/cart") {
+                returnUrl = "m.shangpin.com/cartaction!showcart";
+                window.location.href = "http://" + returnUrl;
+            }
+            if (pathname == "/account/orderlist/status1/1") {
+                returnUrl = "m.shangpin.com/orderaction!orderlist";
+                window.location.href = "http://" + returnUrl;
+            }
+            if (pathname == "/bazaar") {
+                returnUrl = "m.shangpin.com/bazaar";
+                window.location.href = "http://" + returnUrl;
+            }
+            if (pathname == "/ok") {
+                returnUrl = "m.shangpin.com/ok";
+                window.location.href = "http://" + returnUrl;
+            }
+        }
+    </script>
+
+<body id="brandbodyID">
+    <input id="NewShangpinLoginDomainUrl"  type="hidden">
+    <input id="NewShangpinTradeDomainUrl"  type="hidden">
+    <input id="NewShangpinDomainUrl"  type="hidden">
+    <input id="NewShangpinAccountDomainUrl"  type="hidden">
+    <input id="NewAoLaiTradeDomainUrl"  type="hidden">
+    <!--页头倒计时-->
+    <input id="IndexCmsContentAD" name="IndexCmsContentAD" value="" type="hidden">
+
+
+
+<!--头部大图片start-->
+<div class="sp_banner">
+    <div class="img_banner">
+        <img src="__PUBLIC__/Home/History/images/bg_top01.jpg" width="1900" height="223">
+        <img src="__PUBLIC__/Home/History/images/bg_top02.jpg" width="1900" height="223">
+    </div>
+    <div class="top_menu">
+        <ul>
+            <li><a href="" target="_blank">商品浏览</a>
+            </li>
+            <li><a href="" target="_blank">跨界合作</a> </li>
+            <li><a href="" target="_blank">明星演绎</a> </li>
+            <li><a href="" target="_blank">品牌历史</a> </li>
+        </ul>
+    </div>
+</div>
+<!--头部大图片end -->
+<div class="sp_activity sp_activity01">
+    
+	<dl class="clr">
+        <div class="box_video">
+			<object id="sp-video" name="spVideo" width="605" height="330">
+			<param name="src" ><param name="quality" value="high">
+			<param name="wmode" value="transparent">
+			</object>
+				<div class="sp-video-mask" name="sp_videoMask" style="width: 605px; height: 330px; position: absolute; display: none;">
+				</div>
+		</div>
+        
+		
+		<foreach name="historys" item="history">
+			<img src="__PUBLIC__/Home/History/images/{$history['history_picname']}" width="964"/>
+		</foreach>   
+			
+			<img src="__PUBLIC__/Home/History/images/history_29.jpg" width="964"/>
+    
+	</dl>
+    <ul class="bottom_list">
+        <li><a href="#" target="_blank">商品浏览</a>
+        </li>
+        <li><a href="#" target="_blank">跨界合作</a> </li>
+        <li><a href="#" target="_blank">明星演绎</a> </li>
+        <li><a href="#" target="_blank">品牌历史</a> </li>
+    </ul>
+</div>
+</block>
+    <!--Footer Start-->

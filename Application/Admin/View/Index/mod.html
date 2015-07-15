@@ -1,0 +1,102 @@
+<extend name="Public:layout" />
+<block name="main-content">
+	<div class="main-content">
+					<div class="breadcrumbs" id="breadcrumbs">
+						<script type="text/javascript">
+							try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+						</script>
+
+						<ul class="breadcrumb">
+							<li>
+								<i class="icon-home home-icon"></i>
+								<a href="#">Home</a>
+							</li>
+
+							<li>
+								<a href="#">前台首页图片管理</a>
+							</li>
+							<li class="active">修改首页图片</li>
+						</ul><!-- .breadcrumb -->
+
+						<div class="nav-search" id="nav-search">
+							<form class="form-search">
+								<span class="input-icon">
+									<input type="text" placeholder="Search ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
+									<i class="icon-search nav-search-icon"></i>
+								</span>
+							</form>
+						</div><!-- #nav-search -->
+					</div>
+                     
+					<div class="page-content">
+						<div class="page-header">
+							<h1>
+								前台首页图片管理
+								<small>
+									<i class="icon-double-angle-right"></i>
+									修改首页图片
+								</small>
+							</h1>
+						</div><!-- /.page-header -->
+
+						<div class="row">
+							<div class="col-xs-12">
+								<!-- PAGE CONTENT BEGINS -->
+
+								<form class="form-horizontal" action="__URL__/update" method="post" role="form" enctype="multipart/form-data">
+								    
+									<input type="hidden" name="index_id" value="{$index['index_id']}"/>
+								    <div class="space-4"></div>
+									
+																		
+、
+
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 栏  目：</label>
+
+										<div class="col-sm-9">
+											<input type="text" id="form-field-2" name="index_name" value="{$index[index_name]}" class="col-xs-10 col-sm-5" readonly/>
+											<span class="help-inline col-xs-12 col-sm-7">
+												<span class="middle">*</span>
+											</span>											
+										</div>
+									</div>
+
+									
+                                    <div class="space-4"></div>
+
+
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 图片名：</label>
+										<div class="form-group">
+											 <div id="imgs">&nbsp;&nbsp;&nbsp;&nbsp;<img width="200px" src="__PUBLIC__/Home/index/images/{$index['index_picname']}"></div>
+											<center><input id="file_upload" name="index_picname" type="file" multiple="true" value="{$index[index_picname]}" /></center>
+											
+										</div>
+									</div>
+                                   
+									<input type="hidden" name="index_picname" value="{$index['index_picname']}"/>			
+									<div class="clearfix form-actions">
+										<div class="col-md-offset-3 col-md-9">
+											<button class="btn btn-info" type="submit">
+												<i class="icon-ok bigger-110"></i>
+												Submit
+											</button>
+
+											&nbsp; &nbsp; &nbsp;
+											<button class="btn" type="reset">
+												<i class="icon-undo bigger-110"></i>
+												Reset
+											</button>
+										</div>
+									</div>
+                        
+									</form>
+							</div> 
+						</div>							
+									</div><!-- /.col -->
+						</div><!-- /.row -->
+					</div><!-- /.page-content -->
+				</div><!-- /.main-content -->
+
+</block>

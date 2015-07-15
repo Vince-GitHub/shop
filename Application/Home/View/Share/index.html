@@ -1,0 +1,67 @@
+<extend name="Public:layout" />
+<block name="main">
+    
+	<link href="__PUBLIC__/Home/share/css/about.css" rel="stylesheet" type="text/css">
+
+<body>
+<div>
+    <div id="helpCenter_main" class="box clr">
+	<div id="helpCenter_main" class="box clr">
+        <div class="flt helpCenter_asidebox">
+            <div class="helpCenter_aside">
+                
+                <h4>关于唯风尚  About Us</h4>
+                <a href="" title="公司简介"><i></i>公司简介<br>Company Introduction</a>
+                <a href="" title="管理团队"><i></i>管理团队<br>Managment Team</a>
+                <a href="" title="投资者关系"><i></i>投资者关系<br>Investors</a>
+
+                <h4>尚品新闻 News</h4>
+                <a class="on" href="" title="国内媒体"><i></i>国内媒体<br>Chinese Press</a>
+                <a href="" title="国外媒体"><i></i>国外媒体<br>International Press</a>
+                
+                <h4><a href="" title="招聘信息">招聘信息 Job Opportunities</a></h4>
+                <h4><a href="" title="品牌招商">品牌招商 Business Development</a></h4>
+                <h4><a href="" title="客户之声">客户之声 Feedback</a></h4>
+                <h4><a href="" title="联系我们">联系我们 Contact Us</a></h4>
+                <h4><a href="" title="网站地图">网站地图 Site Map</a></h4>
+                <h4><a href="" title="友情链接">友情链接 Links</a></h4>             
+            </div>
+        </div>
+				
+        <div class="frt helpCenter_con">
+            <h3>唯风尚 &gt; 官方购物分享平台<i></i></h3>
+            
+			<foreach name="share" item="shares">
+				<dl class="clr">
+					<dt class="flt">					
+						<foreach name="goods" item="good">
+							<if condition="$good['goods_id'] eq $shares['share_goodsid']">	
+								<img class="loader" src="__PUBLIC__/uploads/{$good['goods_picname']}" width="200" height="248" />
+							</if>
+						</foreach>
+					</dt>
+					
+					<dd class="flt">
+						<p class="gray">TiTle：{$shares['share_title']} &nbsp;&nbsp;&nbsp;&nbsp;
+							<a href="#">唯风尚分享平台</a></p>
+							<br/>
+							<h3>
+								<a target="_blank" href="" title="">
+									<foreach name="users" item="user">
+										<if  condition="$user['users_id'] eq $shares['share_userid']">
+											{$user['users_name']}
+										</if>
+									</foreach></a>
+								&nbsp; &amp; &nbsp;&nbsp;{$shares['share_title']}
+							</h3><br/>
+						<p class="tt">{$shares['share_content']}</p>
+						<a target="_blank" href="">发表时间：{$shares['share_time']|date="Y-m-d H:i",###}</a>
+					</dd>
+				</dl>
+				<hr/>
+            </foreach>
+		
+		</div>
+    </div>
+</div>
+</block>

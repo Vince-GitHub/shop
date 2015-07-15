@@ -1,0 +1,67 @@
+
+
+var template =   "<li>欢迎来到尚品网，<a class='unLogin' id='NologinUrl' href='http://login.shangpin.com#signIn' title='登录'>登录</a>|</li>" +
+	"<li><a class='unLogin' id='NoRegUrl' href='http://login.shangpin.com#signUp' title='注册'>注册</a></li>" +
+    "<li><a href='http://www.shangpin.com/Main/Mobile' target='_blank' id='spNewHeader_mobile'><span></span>手机尚品</a>|</li>" + 
+	"<li><a id='spNewHeader_shopcart' href='http://login.shangpin.com#signIn'><span></span>购物车<ins>(0)</ins></a></li><input type='hidden' id='isLogin' value='' />";
+
+(function(){
+    var id=document.getElementById('sp_newHeader_loginForm');
+    if(id){
+        id.innerHTML=template;
+var url="?returnUrl="+encodeURIComponent(window.location.href);
+        loader.using("http://js11.shangpin.com/ResourceHandler.ashx?f=~/shangpin/Scripts/live/dev/core/config_newuserfn/js&amp;v=20150416025713").excute();
+        document.getElementById('NologinUrl').href='http://login.shangpin.com'+url+'#signIn';
+        document.getElementById('NoRegUrl').href='http://login.shangpin.com'+url+'#signUp';
+        document.getElementById('spNewHeader_shopcart').href='http://login.shangpin.com'+'?returnUrl=http://trade.shangpin.com/trade/cart'+'#signIn';
+    }
+})();
+
+// ntalker
+var _itemid = (function() {
+var href = window.location.href;
+if(href.indexOf('/product/')>0)
+return encodeURIComponent(href);
+else {
+return "";
+}
+
+})() || "";
+var _itemid = (function() {
+var href = window.location.href;
+if(href.indexOf('/product/')>0)
+return encodeURIComponent(href);
+else {
+return "";
+}
+
+})() || "";
+
+NTKF_PARAM = {
+siteid:"kf_9986",
+settingid: "kf_9986_1355827406710",
+itemid: _itemid
+};
+
+
+$(function() {
+loader.using("http://download.ntalker.com/t2ds/ntkfstat.js");
+});
+
+$(function() {
+    if(loader)
+    {
+        $.ajax({
+                url: "http://account.shangpin.com/account/getinfocount",
+                type: "get",
+                jsonp:"callback",
+                dataType: "jsonp"
+            }).done(function (data) {             
+            
+                if (data.cart) {
+                
+                    $("#spNewHeader_shopcart>ins").text("(" + data.cart + ")");
+                }
+            });
+    }
+});

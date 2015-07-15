@@ -1,0 +1,195 @@
+<extend name="Public:layout" />
+<block name="main-content">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        
+         <link rel="stylesheet" href="__PUBLIC__/Admin/css/uploadify.css">
+        <script src='__PUBLIC__/Admin/js/jquery.js'></script>
+        <script src='__PUBLIC__/Admin/js/jquery.uploadify.min.js'></script>
+    </head>
+	<div class="main-content">
+					<div class="breadcrumbs" id="breadcrumbs">
+						<script type="text/javascript">
+							try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+						</script>
+
+						<ul class="breadcrumb">
+							<li>
+								<i class="icon-home home-icon"></i>
+								<a href="#">Home</a>
+							</li>
+
+							<li>
+								<a href="__APP__/Goods/index">商品管理</a>
+							</li>
+							<li class="active">添加商品</li>
+						</ul><!-- .breadcrumb -->
+
+						<div class="nav-search" id="nav-search">
+							<form class="form-search">
+								<span class="input-icon">
+									<input type="text" placeholder="Search ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
+									<i class="icon-search nav-search-icon"></i>
+								</span>
+							</form>
+						</div><!-- #nav-search -->
+					</div>
+
+					<div class="page-content">
+						<div class="page-header">
+							<h1>
+								商品管理
+								<small>
+									<i class="icon-double-angle-right"></i>
+									添加商品
+								</small>
+							</h1>
+						</div><!-- /.page-header -->
+
+						<div class="row">
+							<div class="col-xs-12">
+								<!-- PAGE CONTENT BEGINS -->
+
+								<form class="form-horizontal" action="__URL__/insert" method="post" role="form" enctype="multipart/form-data">
+								    <div class="space-4"></div>
+									
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 类别ID：</label>
+
+										<div class="col-sm-9">
+										    <select name="goods_typeid" style="width:350px">
+                                            <option>-请选择-</option>
+										    <foreach name="types" item="type">
+											<option>
+											{$type['type_name']}
+											</option>
+											
+											</foreach>
+											</select>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 商品名称： </label>
+
+										<div class="col-sm-9">
+											<input type="text" id="form-field-2" name="goods_goods" placeholder="请修改商品名称" class="col-xs-10 col-sm-5" />
+											<span class="help-inline col-xs-12 col-sm-7">
+												<span class="middle">*</span>
+											</span>
+										</div>
+									</div>
+									
+
+									<div class="space-4"></div>
+
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 生产厂家： </label>
+
+										<div class="col-sm-9">
+											<input type="text" id="form-field-2" name="goods_company" placeholder="请添加生产厂家" class="col-xs-10 col-sm-5" />
+											<span class="help-inline col-xs-12 col-sm-7">
+												<span class="middle">*</span>
+											</span>
+										</div>
+									</div>
+                                    
+									<div class="space-4"></div>
+
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 简 介： </label>
+
+										<div class="col-sm-9">
+											<textarea cols="20" rows="4" id="form-field-2" name="goods_descr" placeholder="请添加生产厂家" class="col-xs-10 col-sm-5" ></textarea>
+											<span class="help-inline col-xs-12 col-sm-7">
+												<span class="middle">*</span>
+											</span>
+										</div>
+									</div>
+                                    <div class="space-4"></div>
+
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 单 价： </label>
+
+										<div class="col-sm-9">
+											<input type="number" id="form-field-2" name="goods_price" placeholder="请修改单价" class="col-xs-10 col-sm-5" />
+											<span class="help-inline col-xs-12 col-sm-7">
+												<span class="middle">*</span>
+											</span>
+										</div>
+									</div>
+									<div class="space-4"></div>
+
+
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 正面图片：</label>
+									<div class="form-group">
+											 <div id="imgs">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+											<input id="file_upload" name="goods_picname" type="file" multiple="true" value="" />
+										</div>
+										
+									</div>
+									</div>
+									<div class="space-4"></div>
+
+
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 反面图片：</label>
+									<div class="form-group">
+											 <div id="imgs">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+											<input id="file_upload" name="goods_picname2" type="file" multiple="true" value="" />
+										</div>
+										
+									</div>
+									</div>
+                                    <div class="space-4"></div>
+
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 状 态： </label>
+
+										<div class="col-sm-9">
+											<input id="form-field-2" type="radio" name="goods_state" value="1">新品上市&nbsp;&nbsp;&nbsp;&nbsp;
+											<input id="form-field-2" type="radio" name="goods_state" value="2">在售&nbsp;&nbsp;&nbsp;&nbsp;
+											<input id="form-field-2" type="radio" name="goods_state" value="3">热销&nbsp;&nbsp;&nbsp;&nbsp;
+											<input id="form-field-2" type="radio" name="goods_state" value="4">掌柜推荐&nbsp;&nbsp;&nbsp;&nbsp;
+											<input id="form-field-2" type="radio" name="goods_state" value="5">已下架&nbsp;&nbsp;&nbsp;&nbsp;
+										</div>
+										
+									</div>
+                                    <div class="space-4"></div>
+
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 库存量： </label>
+
+										<div class="col-sm-9">
+											<input type="number" id="form-field-2" name="goods_store" placeholder="请修改库存量" class="col-xs-10 col-sm-5" />
+											<span class="help-inline col-xs-12 col-sm-7">
+												<span class="middle">*</span>
+											</span>
+										</div>
+									</div>
+                                    <div class="space-4"></div>
+						
+									<div class="clearfix form-actions">
+										<div class="col-md-offset-3 col-md-9">
+											<button class="btn btn-info" type="submit">
+												<i class="icon-ok bigger-110"></i>
+												Submit
+											</button>
+
+											&nbsp; &nbsp; &nbsp;
+											<button class="btn" type="reset">
+												<i class="icon-undo bigger-110"></i>
+												Reset
+											</button>
+										</div>
+									</div>
+                                  
+									</form>
+							</div>
+									</div><!-- /.col -->
+						</div><!-- /.row -->
+					</div><!-- /.page-content -->
+				
+
+</block>

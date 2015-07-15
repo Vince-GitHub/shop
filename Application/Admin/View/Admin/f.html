@@ -1,0 +1,65 @@
+<for start="9" end="1" comparison="gt"  step="-1"  name="k">
+    {$k}
+    <br />
+    aaa
+</for>
+
+<hr />
+<switch name="num">
+    <case value="1">周一</case>
+    <case value="2">周二</case>
+    <case value="3">周三</case>
+    <default />其它
+</switch>
+
+<gt name="num" value="20">1<else/>2</gt>
+
+<hr />
+
+<in name="num" value="1,5,7,8,10,20">
+    b
+</in>
+
+<notin name="num" value="1,2,3,4">
+    c
+</notin>
+
+<hr />
+<notbetween name="num" value="1,50">
+    d
+</notbetween>
+
+<hr />
+
+<if condition="$num lt 10">
+    lt10
+<elseif condition="$num eq 20"/>
+    eq20
+<else/>
+    gt10
+</if>
+<hr />
+<assign name="age" value="18" />
+{$age}
+
+<php>echo 1111</php>
+
+<literal> 
+    if(){
+        echo "<p>qqqqqqqqq</p>";
+    }
+  </literal>
+  
+  <hr />
+  <form action="__CONTROLLER__/checkCode" method="post">
+    <input type="text" name="code" />
+    <input type="submit" value="提交">
+  </form>
+  <img id="code" src="__CONTROLLER__/code">
+  
+  <script>
+    var code = document.getElementById("code");
+    code.onclick = function(){
+        this.src = this.src + "/"+ Math.random();
+    }
+  </script>

@@ -1,0 +1,1 @@
+<?php if (!defined('THINK_PATH')) exit(); if(is_array($k)): foreach($k as $key=>$k): ?><a style="color:#ccc" href="<?php echo U('Search/index');?>?keywords_keyword=<?php echo ($k['keywords_keyword']); ?>"><?php echo ($k['keywords_keyword']); ?></a>&nbsp;&nbsp;&nbsp;<?php endforeach; endif; ?>

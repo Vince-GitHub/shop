@@ -1,0 +1,122 @@
+<extend name="Public:layout" />
+<block name="main-content">
+				<div class="main-content">
+					<div class="breadcrumbs" id="breadcrumbs">
+						<script type="text/javascript">
+							try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+						</script>
+
+						<ul class="breadcrumb">
+							<li>
+								<i class="icon-home home-icon"></i>
+								<a href="#">首页</a>
+							</li>
+
+							<li>
+								<a href="#">用户商品收藏管理</a>
+							</li>
+							<li class="active">用户商品收藏管理</li>
+						</ul><!-- .breadcrumb -->
+
+						<div class="nav-search" id="nav-search">
+							<form class="form-search">
+								<span class="input-icon">
+									<input type="text" placeholder="Search ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
+									<i class="icon-search nav-search-icon"></i>
+								</span>
+							</form>
+						</div><!-- #nav-search -->
+					</div>
+
+					<div class="page-content">
+						<div class="page-header">
+							<h1>
+								用户商品收藏管理
+								<small>
+									<i class="icon-double-angle-right"></i>
+									用户商品收藏管理
+								</small>
+							</h1>
+						</div><!-- /.page-header -->
+
+						<div class="row">
+							<div class="col-xs-12">
+								<!-- PAGE CONTENT BEGINS -->
+
+								<div class="row">
+									<div class="col-xs-12">
+										<div class="table-responsive">
+											<table id="sample-table-1" class="table table-striped table-bordered table-hover">
+												<thead>
+													<tr>
+														<th class="center">
+															<label>
+																<input type="checkbox" class="ace" />
+																<span class="lbl"></span>
+															</label>
+														</th>
+														<th><i class="icon-time bigger-110 hidden-480"></i>用户 ID:</th>
+														<th class="hidden-480">用户名称:</th>
+														<th class="hidden-480">商品 ID:</th>
+														<th>商品名称:</th>
+														<th class="hidden-480">商品图片:</th>
+														<th class="hidden-480">收藏时间:</th>
+													</tr>
+												</thead>
+												
+												<tbody>
+												<foreach name="collects" item="collect">
+													<tr>
+														<td class="center">
+															<label>
+																<input type="checkbox" class="ace" />
+																<span class="lbl"></span>
+															</label>
+														</td>
+												
+												
+														<td>
+															<a href="#">{$collect['collect_userid']}</a>
+														</td>
+													
+													<!--根据id去用户表查询用户id-->
+														<td>
+														<foreach name="users" item="user">
+															<if condition="$collect['collect_userid'] eq $user['users_id'] ">
+																{$user['users_name']}
+															</if>
+														</foreach>
+														</td>
+														<td class="hidden-480">{$collect['collect_goodsid']}</td>
+													
+													<!--根据商品id去商品表查询商品名称和图片-->
+														<td>
+														<foreach name="goods" item="good">
+															<if condition="$good['goods_id'] eq $collect['collect_goodsid'] ">
+																{$good['goods_goods']}
+														</td>
+														
+														<td>
+																<img width=60px height=60px src="__PUBLIC__/uploads/{$good['goods_picname']}"/>
+															</if>
+														</foreach>
+														</td>
+														<td class="hidden-480">
+															<span class="label label-sm label-warning">{$collect['collect_time'] | date="Y-m-d",###}</span>
+														</td>
+													</tr>
+											</foreach>
+											</tbody>
+											</table>
+										</div><!-- /.table-responsive -->
+									</div><!-- /span -->
+								</div><!-- /row -->
+									</div><!-- /.modal-dialog -->
+								</div><!-- PAGE CONTENT ENDS -->
+							</div><!-- /.col -->
+						</div><!-- /.row -->
+					</div><!-- /.page-content -->
+				</div><!-- /.main-content -->
+</body>
+</html>
+</block>

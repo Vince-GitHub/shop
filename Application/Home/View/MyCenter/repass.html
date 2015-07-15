@@ -1,0 +1,110 @@
+<extend name="Public:layout">
+<block name="main">
+  
+    <link href="__PUBLIC__/HOME/myCenter/ResourceHandler_007.css" rel="stylesheet" type="text/css">
+    <link href="__PUBLIC__/HOME/myCenter/ResourceHandler_002.css" rel="stylesheet" type="text/css">
+    <link href="__PUBLIC__/HOME/myCenter/ResourceHandler_005.css" rel="stylesheet" type="text/css">
+    <link href="__PUBLIC__/HOME/myCenter/ResourceHandler_008.css" rel="stylesheet" type="text/css">
+    <link href="__PUBLIC__/HOME/myCenter/ResourceHandler_006.css" rel="stylesheet" type="text/css">
+    <link href="__PUBLIC__/HOME/myCenter/ResourceHandler.css" rel="stylesheet" type="text/css">
+    <link href="__PUBLIC__/HOME/myCenter/ResourceHandler_004.css" rel="stylesheet" type="text/css">
+    <link href="__PUBLIC__/HOME/myCenter/ResourceHandler_003.css" rel="stylesheet" type="text/css">
+    <link href="__PUBLIC__/HOME/myCenter/ResourceHandler_009.css" rel="stylesheet" type="text/css">
+
+<div class="box" id="sp_newHeader">
+    <!--sp-header-midbar begin-->
+    <div id="sp-header-midbar" class="clr">
+        <div class="logowrap flt">
+           
+            <a href="__APP__/myCenter" title="用户中心">
+                <img src="__PUBLIC__/HOME/myCenter/logo_member_new.jpg" alt="用户中心" height="38" width="105"></a>
+            </div>       
+    </div>
+</div>
+
+    <div class="member_wrapper">
+        <!--member Start-->
+        <div class="box clr">
+
+<div id="member_left" class="flt">
+    <div class="member_leftMenu">
+        <h6>
+            交易管理</h6>
+        <ul>
+            <li><a id="OrderList" href="__APP__/myOrder">我的订单</a></li>
+
+           
+        </ul>
+        <h6>
+            我的收藏</h6>
+        <ul>
+            <li><a id="FavoriteProduct" href="">收藏的单品</a> </li>
+        </ul>
+       
+        
+        <h6>
+            分享与关注</h6>
+        <ul>
+            <li><a id="FavoriteBrand" href="">我的分享</a></li>
+        </ul>
+         <h6>
+            账户管理</h6>
+        <ul>
+            <li><a class="curr" id="UserInfo" href="__APP__/myCenter">账户信息</a></li>
+            
+           <li><a id="ChangePwd" href="__CONTROLLER__/repass">修改密码</a></li>
+        </ul>
+        
+        <h6>
+            我的评论</h6>
+        <ul>
+            <li><a id="FavoriteBrand" href="__APP__/Comments">浏览评论</a></li>
+        </ul>
+    </div>
+</div>
+<div id="member_right" class="flt">
+    <div class="ac_commarea" style="border:none;">
+    <h3>
+        <em>修改密码</em>
+    </h3>
+     <div class="spAccount_remind"> 
+        为了保证您的尚品账户安全，建议您每三个月修改一次密码。</div>           
+        <form action="/member/ChangePassword" id="ChangePassword" method="post"     name="ChangePassword">                
+                            <div id="spAccount_myinfo">
+                                <div id="spAccount-myinfo_form" class="clr password_form">
+                                    <dl>
+                                        <dt><em>*</em> 当前密码：</dt>
+                                        <dd>
+                                            <span> <input data-val="true" data-val-required="请输入密码" id="oldpsd" name="Password" type="password"></span>
+
+                                        </dd>
+                                    </dl>
+                                    <dl id="newpsdBox">
+                                        <dt><em>*</em> 新密码：</dt>
+                                         <dd>
+                                            <span><input data-val="true" data-val-length="密码长度只能在6-16之间" data-val-length-max="16" data-val-length-min="6" data-val-required="请输入新密码" id="newpsd" name="NewPassword" type="password"></span>
+                                            
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt><em>*</em> 请再次输入新密码：</dt>
+                                         <dd>
+                                            <span><input data-val="true" data-val-equalto="两次输入不一致" data-val-equalto-other="*.NewPassword" data-val-length="密码长度只能在6-16之间" data-val-length-max="16" data-val-length-min="6" data-val-required="请输入新密码" id="reppsd" name="ReNewPassword" type="password"></span>
+                                            
+                                        </dd>
+                                    </dl>
+                                    <dl>
+                                        <dt></dt>
+                                        <dd><input value="确　定" id="passwordAccount_submit" class="submit_Btn" type="button"><i class="form_succeed" style="display:none">保存成功</i></dd>
+                                    </dl>   
+                                 
+                                  
+                                </div>
+
+                            </div>
+                        
+        </form>        
+    </div>
+</div>
+
+</block>

@@ -1,0 +1,115 @@
+<extend name="Public:layout" />
+<block name="main-content">
+
+				<div class="main-content">
+					<div class="breadcrumbs" id="breadcrumbs">
+						<script type="text/javascript">
+							try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+						</script>
+
+						<ul class="breadcrumb">
+							<li>
+								<i class="icon-home home-icon"></i>
+								<a href="#">Admin</a>
+							</li>
+
+							<li>
+								<a href="#">Tables</a>
+							</li>
+							<li class="active">订单详情</li>
+						</ul><!-- .breadcrumb -->
+
+						<div class="nav-search" id="nav-search">
+							<form class="form-search">
+								<span class="input-icon">
+									<input type="text" placeholder="Search ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
+									<i class="icon-search nav-search-icon"></i>
+								</span>
+							</form>
+						</div><!-- #nav-search -->
+					</div>
+
+					<div class="page-content">
+						<div class="page-header">
+							<h1>
+								Tables
+								<small>
+									<i class="icon-double-angle-right"></i>
+									订单详情
+								</small>
+							</h1>
+						</div><!-- /.page-header -->
+
+						<div class="row">
+							<div class="col-xs-12">
+								<!-- PAGE CONTENT BEGINS -->
+
+								<div class="row">
+									<div class="col-xs-12">
+										<div class="table-responsive">
+											<table id="sample-table-1" class="table table-striped table-bdetailed table-hover">
+												<thead>
+													<tr>
+														<th class="center">
+															<label>
+																<input type="checkbox" class="ids ace" />
+																<span class="lbl"></span>
+															</label>
+														</th>
+														<th>详情ID</th>
+														<th>订单ID</th>
+														<th>商品ID</th>
+														<th>商品名</th>
+														<th>商品图片</th>
+														<th>商品单价</th>
+														<th>商品数量</th>
+														<th>总价</th>
+														<th>商品评论</th>
+													</tr>
+												</thead>
+
+												<tbody>
+												<!-- 遍历表内容并输出 -->
+													<foreach name="details" item="detail">
+													<tr>
+														<td class="center">
+															<label>
+																<input type="checkbox" class="ids ace" />
+																<span class="lbl"></span>
+															</label>
+														</td>
+
+														<td>{$detail['detail_id']}</td>
+														<td>{$detail['detail_orderid']}</td>
+														<td>{$detail['detail_goodsid']}</td>
+														<td>{$detail['detail_name']}</td>
+														<td><img width="70px" height="80px" src="__PUBLIC__/Uploads/{$detail['detail_pic']}"/></td>
+														<td>{$detail['detail_price']}</td>
+														<td>{$detail['detail_num']}</td>
+														<td>{$detail['detail_total']}</td>
+														<td><a href = "__APP__/GoodsComment/index/
+														goodsid/{$detail['detail_goodsid']}">查看评论</a></td>
+													</tr>
+													</foreach>
+												</tbody>
+											</table>
+										</div><!-- /.table-responsive -->
+									</div><!-- /span -->
+								</div><!-- /row -->
+							</div><!-- /.col -->
+						</div><!-- /.row -->
+					</div><!-- /.page-content -->
+				</div><!-- /.main-content -->
+
+	  <script>
+    
+        $(".ids:eq(0)").click(function(){
+                      
+           $(".ids:gt(0)").prop("checked", function( i, val ) {
+                        return !val;
+            });
+     
+        });
+ 
+    </script>
+</block>

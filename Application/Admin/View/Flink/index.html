@@ -1,0 +1,141 @@
+<extend name="public:layout" />
+<block name="main-content">
+    <div class="main-content">
+					<div class="breadcrumbs" id="breadcrumbs">
+						<script type="text/javascript">
+							try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+						</script>
+
+						<ul class="breadcrumb">
+							<li>
+								<i class="icon-home home-icon"></i>
+								<a href="__APP__">Home</a>
+							</li>
+
+							<li>
+								<a href="#">友情链接</a>
+							</li>
+							<li class="active">链接列表</li>
+						</ul><!-- .breadcrumb -->
+
+						<div class="nav-search" id="nav-search">
+							<form class="form-search">
+								<span class="input-icon">
+									<input type="text" placeholder="Search ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
+									<i class="icon-search nav-search-icon"></i>
+								</span>
+							</form>
+						</div><!-- #nav-search -->
+					</div>
+
+					<div class="page-content">
+						<div class="page-header">
+							<h1>
+								友情链接
+								<small>
+									<i class="icon-double-angle-right"></i>
+									查看链接
+								</small>
+							</h1>
+						</div><!-- /.page-header -->
+
+						<div class="row">
+							<div class="col-xs-12">
+								<!-- PAGE CONTENT BEGINS -->
+
+								<div class="row">
+									<div class="col-xs-12">
+										<div class="table-responsive">
+                                        <form action="__CONTROLLER__/add" method="post">
+											<table id="sample-table-1" class="table table-striped table-bordered table-hover">
+												<thead>
+													<tr>
+														<th class="center">
+															<label>
+																<input type="checkbox" class="ids ace" />
+																<span class="lbl"></span>
+															</label>
+														</th>
+														<th>链接ID</th>
+														<th>链接名</th>
+														<th>链接状态</th>
+														<th>链接地址</th>
+														<th width="180px">操作</th>
+
+													</tr>
+												</thead>
+
+												<tbody>
+                                                    
+														<!-- 遍历表内容并输出 -->
+													<foreach name="links" item="link">
+													<tr>
+														<td class="center">
+															<label>
+																<input type="checkbox" class="ids ace" />
+																<span class="lbl"></span>
+															</label>
+														</td>
+
+														<td>{$link['Flink_id']}</td>
+														<td>{$link['Flink_name']}</td>
+														
+													<!-- 根据订单状态不同显示不同信息 -->
+													<switch name="link['Flink_status']">
+														<case value='0'><td>未展示</td>
+														</case>
+														<case value="1"><td>已展示</td></case>
+														<case value="2"><td>无效链接</td></case>
+													</switch>
+													<!-- <td>{$link['links_status']}</td> -->
+
+														<td>{$link['Flink_url']}</td>
+														<td>
+															<div class="visible-md visible-lg hidden-sm hidden-xs btn-group">
+																<button class="btn btn-xs btn-success">
+																	<i class="icon-ok bigger-120"></i>添加
+																</button>
+
+																<a href="__CONTROLLER__/mod/id/{$link['Flink_id']}" class="btn btn-xs btn-info">
+																	<i class="icon-edit bigger-120"></i>修改
+																</a>
+
+																<a href="__CONTROLLER__/del/id/{$link.Flink_id}"  class="btn btn-xs btn-danger">
+																	<i class="icon-trash bigger-120"></i>删除
+																</a>
+
+															
+															</div>
+
+															
+															</div>
+														</td>
+													</tr>
+                                                </foreach>
+													</tbody>
+											</table>
+                                            
+                                            </form>
+										</div><!-- /.table-responsive -->
+									</div><!-- /span -->
+								</div><!-- /row -->
+
+								
+							</div><!-- /.col -->
+						</div><!-- /.row -->
+					</div><!-- /.page-content -->
+				</div><!-- /.main-content -->
+                
+    <script>
+    
+        $(".ids:eq(0)").click(function(){
+                      
+           $(".ids:gt(0)").prop("checked", function( i, val ) {
+                        return !val;
+            });
+     
+        });
+ 
+    </script>
+
+</block>

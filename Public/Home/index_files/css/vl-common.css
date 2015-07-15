@@ -1,0 +1,43 @@
+/* popup */
+.cmMask {background: none repeat scroll 0 0 black; height: 100%; left: 0; opacity: 0.6; filter: alpha(opacity=60); position: absolute; top: 0; visibility: hidden; width: 100%; z-index: 1000;}
+.cmDialog {display: none;}
+.cmDialogReady {display: block; left: -999px; position: absolute; top: -999px; z-index: 1100;}
+.cmLoading {display: block; left: -999px; position: absolute; top: -999px; z-index: 1200;}
+.cmLoading {width: 280px; padding: 50px 0; background: url(../images/common/loading.gif) no-repeat -80px -35px #fff; border: 6px solid #414141; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); color: #555555; border-radius: 6px;}
+.cmLoading p {display: block; line-height: 1.4em; color: #333; font-size: 18px; text-align: left; padding-left: 90px}
+.cmDialogReady {background: #fff;}
+.cmDialogReady .dialog-inner {padding: 20px;}
+.cmDialogReady a.close-dialog {position: absolute; right: 12px; top: 12px; z-index: 10;}
+.cmDialogReady a.close-dialog {background: url(../images/common/close-bg.png) no-repeat center center transparent; width: 12px; height: 12px;}
+.cmDialogReady a.close-dialog:hover {opacity: 0.8; filter: alpha(opacity=80);}
+.alert-box {min-width: 160px; border: 1px solid #ccc; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);}
+.alert-box a.close-dialog {top: 10px}
+.alert-box .alert-box-inner {padding: 25px;}
+.alert-box .alert-title {display: none; margin: 0; position: absolute; top: -5px; left: 0; height: 26px; width: 100%; text-indent: 4px; line-height: 26px; color: #fff; background: #baa67d}
+.alert-box .alert-box-inner div.icon {float: left; width: 0;}
+.alert-box.success .alert-box-inner div.icon {/*background: url("alert.jpg") no-repeat scroll 0 0 transparent;*/ height: 60px; width: 50px;}
+.alert-box.error .alert-box-inner div.icon {/*background: url("alert.jpg") no-repeat scroll 0 -120px transparent;*/ height: 60px; width: 50px;}
+.alert-box.delete .alert-box-inner div.icon {/*background: url("alert.jpg") no-repeat scroll 0 -60px transparent;*/ height: 60px; width: 50px;}
+.alert-box .alert-box-inner div.text {font-family: Verdana,Arial,simhei,sans-serif; font-size: 16px; padding-top: 10px; text-align: center}
+.alert-box .alert-box-inner div.text {font-family: '微软雅黑';}
+.alert-box .alert-box-inner div.text p {margin-bottom: 10px;}
+.alert-box.success .alert-box-inner div.text {font-size: 25px;}
+.alert-box.success .alert-box-inner div.text, .alert-box.error .alert-box-inner div.text {margin-left: 0px;}
+.alert-box.success .alert-box-inner div.text {color: #8f8;}
+.alert-box.error .alert-box-inner div.text {color: #f88;}
+.confirm-box {min-width: 100px; min-height: 100px; width: auto; height: auto; border: 1px solid #ccc; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);}
+.confirm-box a.close-dialog {top: 10px}
+.confirm-box .alert-box-inner {padding: 25px;}
+.confirm-box .alert-title {margin: 0; position: absolute; top: -5px; left: 0; height: 26px; width: 100%; text-indent: 4px; line-height: 26px; color: #fff; background: #baa67d; display: none}
+.confirm-box .alert-box-inner div.icon {float: left; width: 0;}
+.confirm-box .alert-box-inner div.text {font-family: Verdana,Arial,simhei,sans-serif; font-size: 14px; padding-top: 10px;}
+.confirm-box .alert-box-inner div.text {font-family: '微软雅黑';}
+.confirm-box .alert-box-inner div.text p {margin-bottom: 10px;}
+.confirm-box .confirm-btn-box {padding: 25px 0 0; text-align: center}
+.confirm-box .confirm-ok-btn {text-decoration: none; display: inline-block; *display: inline; *zoom: 1; padding: 1px 23px; color: #fff; border: 1px solid #000; background: #000; margin: 0 10px}
+.confirm-box .confirm-cancel-btn {text-decoration: none; display: inline-block; *display: inline; *zoom: 1; padding: 1px 23px; border: 1px solid #000; color: #000; margin: 0 10px}
+.confirm-box .confirm-ok-btn:hover,
+.confirm-box .confirm-cancel-btn:hover {opacity: 0.7; filter: alpha(opacity=70)}
+
+/* scroll */
+.carousel-wrap {overflow: hidden; position: relative;}

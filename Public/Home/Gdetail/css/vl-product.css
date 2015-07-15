@@ -1,0 +1,237 @@
+.vl-product {max-width: 1260px; min-width: 1024px; padding-top: 15px; margin: 0 auto; width: 100%; position: relative;}
+/*right*/
+.vl-product .right-side {float: right; width: 55%; margin: 0 15px; position: relative;}
+.vl-product .right-side .brand {font-size: 20px; padding-top: 10p; line-height: 1.4em}
+.vl-product .right-side .brand a {color: #282828; text-decoration: none; cursor: pointer}
+.vl-product .right-side .product-name {color: #000; font-size: 20px; line-height: 1.6em; padding-bottom: 5px;}
+.vl-product .right-side .price-info {padding: 0 0 10px}
+.vl-product .right-side .price-label {color: #000; font-size: 30px; padding-right: 10px}
+.vl-product .right-side .not-login {background: #000; color: #fff; padding: 2px 5px; cursor: pointer; vertical-align: bottom; border-radius: 3px; -webkit-border-radius: 3px; font-size: 14px;}
+.vl-product .right-side .market-price del {font-size: 26px;}
+.vl-product .right-side .pro-price small {font-size: 20px; padding-right: 5px; vertical-align: baseline}
+.vl-product .right-side .hide-price .price-label {font-size: 16px;}
+.vl-product .right-side .hide-price .market-price del,
+.vl-product .right-side .hide-price .old-price-label,
+.vl-product .right-side .hide-price small {font-size: 14px;}
+.vl-product .right-side .old-price-label {color: #9a9a9a; font-size: 26px;}
+.vl-product .right-side .price-off {display: none; font-size: 18px; color: #9a9a9a; padding: 0 10px}
+.vl-product .right-side .list-price-label {color: #c33; font-size: 14px; padding: 0 0 18px; line-height: 1.4em}
+.vl-product .right-side .opts {position: absolute; /*width: 108px;*/width: 42px; height: 30px; top: 50px; right: 15px; font-size: 0px;}
+.vl-product .right-side .collect {display: inline-block; *display: inline; width: 28px; height: 28px; background: url(../images/vl-product/icons.png?v=20141217) no-repeat 100px 100px; margin-right: 20px; cursor: pointer; text-indent: -99em; font-size: 0px; overflow: hidden; display: none}
+.vl-product .right-side .collect {background-position: -40px 0}
+.vl-product .right-side .collect.on {background-position: -13px 0;}
+.vl-product .right-side .share {display: inline-block; *display: inline; *zoom: 1; width: 20px; height: 28px; background: url(../images/vl-product/icons.png?v=20141217) no-repeat -70px 0; cursor: pointer; text-indent: -99em; font-size: 0; overflow: hidden}
+.vl-product .attrs {border-top: 1px solid #ccc}
+.vl-product .attrs .attribute-item {margin-bottom: 5px}
+.vl-product .attrs .attr-name {font-size: 13px; color: #000; padding: 10px 0 5px; line-height: 1.4em}
+.vl-product .attrs li {display: inline-block; *display: inline; *zoom: 1; border: 1px solid #ccc; margin-right: 5px; margin-bottom: 5px; cursor: pointer; vertical-align: top}
+.vl-product .attrs .size li.disabled {cursor: default}
+.vl-product .attrs .color li {width: 28px; height: 28px; overflow: hidden; position: relative}
+.vl-product .attrs .color b {-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; width: 100%; height: 100%; *width: 23px; *height: 23px; border: 3px solid #fff; position: absolute; top: -100px; left: 0}
+.vl-product .attrs .color img {width: 28px; height: 28px;}
+.vl-product .attrs .color li:hover,
+.vl-product .attrs .color .selected {border: 1px solid #000}
+.vl-product .attrs .color .disabled:hover {border: 1px solid #ccc}
+.vl-product .attrs .color .disabled b {border: 3px solid #a9a8ae; background: #a9a8ae;}
+.vl-product .attrs .color li:hover b {top: -100px}
+.vl-product .attrs .color .selected:hover b,
+.vl-product .attrs .color .disabled:hover b,
+.vl-product .attrs .color .disabled b,
+.vl-product .attrs .color .selected b {top: 0}
+.vl-product .attrs .color .selected.disabled b {border: 1px solid #000; background: none;}
+.vl-product .attrs .size li {height: 35px; min-width: 14px; line-height: 35px; text-align: center; padding: 0 12px; color: #000}
+.vl-product .attrs .size li:hover {border: 1px solid #000}
+.vl-product .attrs .size .selected {background: #555; color: #fff; border: 1px solid #000}
+.vl-product .attrs .size .disabled:hover {border: 1px solid #ccc}
+.vl-product .attrs .size .disabled {background: #d9d9d9; color: #9f9f9f;}
+.vl-product .attrs .size .size-table-btn {border: 0 none; padding: 0 5px;}
+.vl-product .attrs .size .size-table-btn:hover {text-decoration: underline; border: 0 none}
+.vl-product .to-try {padding: 12px; background: #fafafa; position: relative; margin: 20px 0 0}
+.vl-product .to-try h3 {font-size: 14px; font-weight: normal; line-height: 1.4em; padding-bottom: 6px; margin: 0}
+.vl-product .to-try .desc {font-size: 12px;}
+.vl-product .to-try .view-map {margin-left: 17px; color: #000; cursor: pointer; overflow: hidden; *zoom: 1}
+.vl-product .to-try .view-map b {display: inline-block; *display: inline; *zoom: 1; vertical-align: bottom; width: 18px; height: 20px; background: url(../images/vl-product/icons.png?v=20141217) no-repeat -90px 0; margin-right: 3px;}
+.vl-product .to-try .pop {width: 272px; height: 217px; position: absolute; top: -5000px; left: 0; z-index: 2}
+.vl-product .to-try:hover .pop {top: 70px}
+.vl-product .to-try.up-pop:hover .pop {top: -214px}
+.vl-product .pop-layout {height: 204px; border: 1px solid #e5e5e5; position: relative; background: #fff}
+.vl-product .pop-layout p {color: #838383; text-align: center; font-size: 13px}
+.vl-product .pop-layout .title {padding: 20px 0 0; color: #000; font-size: 14px}
+.vl-product .pop-layout .qrcode {height: 120px; text-align: center; margin-top: 18px;}
+.vl-product .pop-layout .qrcode img {height: 120px; display: inline; border: 0 none}
+.vl-product .pop-layout .arr {position: absolute; left: 14px; top: -10px; height: 10px; width: 16px; background: url(../images/vl-product/icons.png?v=20141217) no-repeat -53px -149px;}
+.vl-product .up-pop .pop-layout .arr {top: 204px; background-position: -53px -159px;}
+.vl-product .btn-box {padding: 35px 0 40px; position: relative}
+.vl-product .btn-box .pop {position: absolute; z-index: 2; left: 0; top: 84px; display: none}
+.vl-product .btn-box .up-pop .pop-layout .arr {top: 227px}
+.vl-product .btn-box .up-pop {top: -200px}
+.vl-product .btn-box .pop-layout {height: auto; padding: 0 50px 17px}
+.vl-product .btn-box .pop-layout .title {padding: 20px 0 10px}
+.vl-product .btn-box .pop-layout .qrcode {margin-top: 0}
+.vl-product .btn-box button {font-size: 14px; width: 186px; height: 42px; line-height: 42px; color: #fff; text-align: center; border: 0 none; cursor: pointer; background: #333}
+.vl-product .btn-box button.disabled {background: #999; cursor: default}
+.vl-product .btn-box .waring {padding-left: 10px; color: red; line-height: 20px; font-size: 14px; font-style: normal}
+.vl-product .service-area {padding: 26px 0 28px; border-top: 1px solid #ccc}
+.vl-product .service-area li {display: inline-block; *display: inline; *zoom: 1; width: 130px; line-height: 57px; font-size: 13px; color: #555; text-align: center}
+.vl-product .service-area li b {display: block; width: 58px; height: 58px; margin: 0 auto; background: url(../images/vl-product/icons.png?v=20141217) no-repeat 100px 100px; vertical-align: middle}
+.vl-product .service-area .s1 {background-position: 0 -33px}
+.vl-product .service-area .s2 {background-position: 0 -90px}
+.vl-product .service-area .s3 {background-position: -63px -33px}
+.vl-product .service-area .s4 {background-position: -63px -90px}
+.vl-product .service-area .s5 {background-position: 0 -254px}
+.vl-product .details .section {margin-bottom: 20px}
+.vl-product .details .section-name {font-size: 13px; color: #000; height: 30px; line-height: 1.4em; text-indent: 12px; border-bottom: 1px solid #ccc; position: relative; cursor: pointer}
+.vl-product .details .section-name b {position: absolute; width: 12px; height: 9px; right: 18px; top: 6px; background: url(../images/vl-product/icons.png?v=20141217) no-repeat 0 -8px}
+.vl-product .details .on .section-name b {background-position: 0 0}
+.vl-product .details .ddl {display: none; overflow: hidden; color: #838383; font-size: 13px; line-height: 1.6em; padding: 14px 0; width: 640px; margin-left: 12px}
+.vl-product .product-info .ddl li {clear: both; margin: 0 0 5px; overflow: hidden}
+.vl-product .product-info .ddl strong {color: #000; float: left; width: 72px; font-weight: normal}
+.vl-product .product-info .ddl span {float: left; width: 554px}
+.vl-product .details .help .section-name b,
+.vl-product .details .to-brand .section-name b {background-position: 0 -18px; height: 12px; width: 10px; right: 21px}
+.vl-product .help a,
+.vl-product .to-brand a {color: #000; width: 100%; height: 100%; display: block;}
+
+/*left*/
+.vl-product .left-side {float: left; width: 42%; overflow: hidden;}
+.vl-product .zoom-box {width: 94.5%; height: 620px; overflow: hidden; margin: 0 auto; border: 1px solid #ccc; position: relative}
+.vl-product .zoom-box img {vertical-align: center}
+.vl-product .left-side .box {width: 94.5%; overflow: hidden; margin: 8px auto;}
+.vl-product .left-side .img-wrapper {width: 88%; margin: 0 auto;}
+.vl-product .left-side .img-list {width: 100%; height: 98px; font-size: 0}
+.vl-product .left-side .img-list li {display: inline-block; *display: inline; *zoom: 1; width: 20%; height: 98px; line-height: 98px; cursor: pointer; vertical-align: top;}
+.vl-product .left-side .img-list .i-box {width: 88%; height: 98px; line-height: 0; border: 1px solid #ccc; }
+.vl-product .left-side .img-list li.on .i-box {border: 1px solid #000}
+.vl-product .left-side .img-list li img {max-width: 100%; max-height: 100%; width: 100%; display: inline; vertical-align: middle}
+.vl-product .left-side .box {position: relative}
+.vl-product .left-side .carousel-content {overflow: hidden}
+.vl-product .left-side .carousel-wrap {position: static}
+.vl-product .left-side .steps {display: none}
+.vl-product .left-side .prev,
+.vl-product .left-side .next {width: 17px; height: 100%; position: absolute; top: 0; z-index: 50}
+.vl-product .left-side .prev-s,
+.vl-product .left-side .next-s {background: url(../images/vl-product/icons.png?v=20141217) no-repeat 0 -999px; width: 17px; height: 25px; position: absolute; top: 50%; margin-top: -13px; left: 0;}
+.vl-product .not-work .prev,
+.vl-product .not-work .next,
+.vl-product .not-work .steps {display: none}
+.vl-product .left-side .not-work:hover .prev,
+.vl-product .left-side .not-work:hover .next {display: block}
+.vl-product .left-side .prev {left: 0; cursor: pointer; display: block;}
+.vl-product .left-side .next {right: 0; cursor: pointer; display: block;}
+.vl-product .left-side .prev-s {background-position: -74px -255px;}
+.vl-product .left-side .next-s {background-position: -94px -255px;}
+.vl-product .left-side .prev.not {cursor: default;}
+.vl-product .left-side .next.not {cursor: default;}
+.vl-product .left-side .not .prev-s {background-position: -74px -310px;}
+.vl-product .left-side .not .next-s {background-position: -94px -310px;}
+.vl-product .left-side .prev:hover .prev-s {background-position: -74px -282px;}
+.vl-product .left-side .next:hover .next-s {background-position: -94px -282px;}
+.vl-product .left-side .not:hover .prev-s {background-position: -74px -310px;}
+.vl-product .left-side .not:hover .next-s {background-position: -94px -310px;}
+
+/*hot area*/
+.vl-product .hot-brand {clear: both; padding-top: 55px;}
+.vl-product .area-name {height: 68px; line-height: 68px; text-align: center; font-size: 18px; color: #000; border-bottom: 1px solid #ccc; margin-bottom: 35px; position: relative;}
+.vl-product .area-name a {color: #000; font-size: 13px; padding-right: 12px; position: absolute; right: 0; top: 0; height: 68px; line-height: 72px;}
+.vl-product .area-name b {background: url(../images/vl-product/icons.png?v=20141217) no-repeat scroll 0 -18px; position: absolute; top: 31px; height: 12px; right: 0; width: 10px;}
+.vl-product .items {font-size: 0; height: 478px; width: 100%; overflow: hidden}
+.vl-product .items li {width: 25%; display: inline-block; *display: inline; *zoom: 1; height: 478px;}
+.vl-product .items li.no-item {width: 100%; font-size: 14px; text-align: center; line-height: 400px;}
+.vl-product .item {font-size: 13px; width: 250px; margin: 0 auto;}
+/*.vl-product .item:hover .name,*/
+.vl-product .item .desc a {color: #282828; text-decoration: none}
+.vl-product .item .desc a:hover  {text-decoration: underline}
+.vl-product .img-box {width: 250px; height: 300px; text-align: center; position: relative; margin-bottom: 34px; font-size: 0; overflow: hidden}
+.vl-product .img-box .normal {width: 250px; height: 300px; overflow: hidden; text-align: center;}
+.vl-product .img-box .hover {text-align: center; position: absolute; width: 250px; height: 300px; overflow: hidden; top: -1000px; z-index: 2; left: 0;}
+.vl-product .img-box .normal,
+.vl-product .img-box .hover {background: url(../images/vl-category/loading.gif) no-repeat center center #fff;}
+.vl-product .img-box img {max-width: 250px; max-height: 300px; vertical-align: middle; display: inline;}
+.vl-product .img-box:hover .hover {top: 0;}
+.vl-product .try {overflow: hidden; width: 56px; height: 26px; line-height: 26px; z-index: 5; position: absolute; right: 5px; top: 5px; font-size: 13px; background: #ccc; color: #fff; text-align: center;}
+.vl-product .list-price {position: absolute; bottom: 0; left: 0; width: 100%; line-height: 22px; color: #fff; font-size: 13px; text-align: left; background: #000; z-index: 5;}
+.vl-product .list-price span {display: block; margin-left: 5px; width: 236px; margin: 0 auto; text-overflow: ellipsis; overflow: hidden; white-space: nowrap;}
+.vl-product .out-of-stock {overflow: hidden; position: absolute; width: 82px; height: 86px; left: 50%; top: 50%; margin: -41px 0 0 -43px; text-align: center; color: #fff; line-height: 86px; background: url(../images/vl-category/icons.png?v=20141217) no-repeat -16px 5px; font-size: 13px; z-index: 5}
+.vl-product .item .brand-name {color: #9a9a9a; font-size: 13px; line-height: 1.4em; margin-bottom: 5px; width: 100%; text-overflow: ellipsis; overflow: hidden; white-space: nowrap;}
+.vl-product .item .name {color: #282828; font-size: 13px; line-height: 1.4em; height: 1.4em; margin-bottom: 5px; text-overflow: ellipsis; overflow: hidden; white-space: nowrap;}
+.vl-product .item .name a {color: #282828; text-decoration: none}
+.vl-product .item .name a:hover {text-decoration: underline}
+.vl-product .item .desc {color: #9a9a9a; height: 2.8em; line-height: 1.4em; overflow: hidden}
+.vl-product .item .info {padding: 5px 0 0; position: relative;}
+.vl-product .item .info b {color: #000; font-size: 16px; padding-right: 15px; font-weight: normal}
+.vl-product .item .info em {color: #9a9a9a; font-size: 13px; font-style: normal}
+.vl-product .item .info del {color: #9a9a9a; font-size: 13px; position: absolute; right: 0; top: 10px}
+.vl-product .item .no-login del {position: static; margin: 0 15px 0 0}
+.vl-product .item .tip {background: #000; color: #fff; padding: 4px 6px; font-size: 13px; border-radius: 3px; cursor: pointer}
+.vl-product .item .tip:hover {background: #999}
+.vl-product .hot-brand .carousel-wrap {position: relative}
+.vl-product .hot-brand .carousel-control {font-size: 0px}
+.vl-product .hot-brand .prev,
+.vl-product .hot-brand .next {width: 50px; height: 50px; position: absolute; background: url(../images/vl-product/icons.png?v=20141217) no-repeat 0 -999px; top: 120px; z-index: 50}
+.vl-product .hot-brand .prev,
+.vl-product .hot-brand .next {display: none}
+.vl-product .carousel-wrap:hover .prev,
+.vl-product .carousel-wrap:hover .next {display: block}
+.vl-product .not-work:hover .prev,
+.vl-product .not-work:hover .next {display: none}
+.vl-product .hot-brand .prev.not,
+.vl-product .hot-brand .next.not {/*opacity: 0.4; filter: alpha(opacity=40); cursor: default*/display: none}
+.vl-product .hot-brand .prev {left: 0; background-position: 1px -201px; cursor: pointer}
+.vl-product .hot-brand .next {right: 0; background-position: -70px -201px; cursor: pointer}
+.vl-product .hot-brand .prev:hover {background-position: 1px -150px;}
+.vl-product .hot-brand .next:hover {background-position: -70px -150px;}
+.vl-product .hot-brand .steps {position: absolute; bottom: 20px; left: 0; *zoom: 1; width: 100%; z-index: 50; text-align: center; height: 30px; line-height: 30px;}
+.vl-product .hot-brand .steps span {display: inline-block; *display: inline; *zoom: 1; text-indent: -99em; font-size: 0; width: 10px; margin: 0 3px; height: 10px; background: url(../images/vl-product/icons.png?v=20141217) no-repeat -108px -11px; cursor: pointer; overflow: hidden}
+.vl-product .hot-brand .steps span.current {background-position: -108px 0}
+
+.tiny-size .vl-product .items {width: 960px; margin: 0 auto;}
+.tiny-size .vl-product .items li {width: 33%;}
+.tiny-size .vl-product .items li.no-item {width: 100%}
+
+/*add to cart success*/
+.add-cart-success {width: 178px; height: 110px; border: 1px solid #e5e5e5; background: #fff; position: absolute; right: 38px; top: -999px; z-index: 200; margin-left: 390px}
+.add-cart-success h3 {margin: 0; color: #000; font-size: 13px; text-align: center; padding: 14px 0}
+.add-cart-success h3 b {display: inline-block; *display: inline; *zoom: 1; width: 20px; height: 23px; vertical-align: middle; margin-right: 8px; background: url(../images/vl-product/icons.png?v=20141217) no-repeat -49px -190px;}
+.add-cart-success a {display: block; margin: 0 auto; width: 112px; height: 35px; line-height: 35px; font-size: 12px; color: #fff; text-align: center; background: #000;}
+.add-cart-success .arr {position: absolute; right: 14px; top: -10px; height: 10px; width: 16px; background: url(../images/vl-product/icons.png?v=20141217) no-repeat -53px -149px;}
+.showAddCartSuccess .vl-product {position: relative; z-index: 300}
+
+/*size box*/
+.size-box {width: auto; height: auto; padding: 0 30px 30px; border: 1px solid #ccc;}
+.size-box .title {height: 80px; line-height: 80px; font-size: 16px;}
+.size-box .img-box {max-width: 760px; max-height: 340px; overflow-x: auto; overflow-y: hidden}
+.size-box .img-box img {max-height: 330px;}
+
+/*zoom*/
+.cmZoom {position: relative; width: 100%; height: 100%}
+.cmZoom .small-img-box {position: relative; overflow: hidden; width: 100%; height: 100%; text-align: center;}
+.cmZoom .small-img-box img {max-width: 100%; max-height: 100%; vertical-align: middle; display: inline; border: 0 none;}
+.cmZoom .range-box {position: absolute; display: none; width: 25%; height: 25%; border: 1px solid #000; background: #fff; opacity: 0.6; filter: alpha(opacity=60)}
+.cmZoom-active {cursor: crosshair}
+.cmZoom-active .range-box {display: none;}
+.cmZoom .big-img-box {background: #fff; position: absolute; display: none; overflow: hidden; left: 0px; top: 0; width: 100%; height: 100%}
+.cmZoom .zoom-block {position: relative; width: 100%; height: 100%}
+.cmZoom-active .big-img-box {display: block}
+.cmZoom .big-img-box img {position: absolute; vertical-align: center; display: inline; border: 0 none; width: 100%; height: 100%}
+
+/*map*/
+.map-block {height: 600px; margin: 0 auto; padding: 20px; width: 800px;}
+.map-block .title {border-bottom: 1px solid #000; clear: both; overflow: hidden; padding: 5px 10px 20px;}
+.map-block .title h2 {float: left; margin: 0;}
+.map-block .title span {color: #888; line-height: 29px; margin-left: 20px;}
+.map-block .map-con {clear: both; overflow: hidden;}
+.map-block .maplist {float: left; height: 508px; margin-right: 10px; overflow-y: auto; width: 150px;}
+.map-block .maplist h3 {padding: 10px 0;}
+.map-block .maplist dl {cursor: pointer; padding: 15px 0 15px 10px;}
+.map-block .maplist dl.selected, .map-block .maplist dl.hover, .map-block .maplist dl:hover {background: none repeat scroll 0 0 #e3e3e3;}
+.map-block .maplist dt span {background: url(../images/vl-product/mdxh.png) no-repeat center center; color: #fff; float: left; font-size: 14px; height: 25px; line-height: 20px; text-align: center; text-transform: uppercase; width: 22px;}
+.map-block .maplist dt {font-size: 12px; line-height: 25px;}
+.map-block .mapsite {float: right; padding-top: 10px; width: 600px;}
+.map-block .mapsite .map_city {color: #999;}
+.map-block .mapsite dt p {margin-bottom: 5px;}
+.map-block .mapsite .map_contact {color: #333; font-size: 18px; font-weight: bold; position: relative;
+}
+.mapsite .map_contact .tel {background: url(../images/vl-product/tel_bg.png) no-repeat scroll 0 50%; font-size: 18px; margin-left: 25px; padding-left: 25px;}
+.mapsite .map_road {color: #888;}
+.mapsite .map_road .times {margin-left: 25px;}
+#maps_container {background: none repeat scroll 0 0 #000; height: 420px;}

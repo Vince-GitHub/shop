@@ -1,0 +1,49 @@
+.vl-index {max-width: 1260px; min-width: 1024px; margin: 0 auto;}
+.vl-index .kv {width: 1260px; height: 587px; font-size: 0; overflow: hidden; position: relative;}
+.vl-index .kv li {width: 1260px; height: 100%; overflow: hidden; display: inline-block; *display: inline; *zoom: 1;}
+.vl-index .kv img {max-width: 1260px; min-width: 1024px; width: 100%}
+.vl-index .kv-ctx .steps {font-size: 0; position: absolute; z-index: 2; left: 0; bottom: 12px; width: 100%; text-align: center;}
+.vl-index .kv-ctx .step {cursor: pointer; width: 30px; margin: 0 5px; display: inline-block; *display: inline; *zoom: 1; height: 10px; background: url(../images/vl-index/icons.png?v=20150401) no-repeat 0 0;}
+.vl-index .kv-ctx .step.current {background-position: -44px 0;}
+.vl-index .brand-list {height: 113px; overflow: hidden; width: 1260px; font-size: 0; position: relative;}
+.vl-index .brand-list li {width: 251px; height: 100%; display: inline-block; *display: inline; *zoom: 1; line-height: 113px; margin-right: 1px; background: #ebebed; text-align: center; cursor: pointer; position: relative;}
+.vl-index .brand-list li .mask {background: #000; opacity: 0; filter: alpha(opacity=0); transition: opacity 0.2s ease 0s; width: 100%; height: 100%; position: absolute; top: 0; left: 0;}
+.vl-index .brand-list li:hover .mask {opacity: 0.3; filter: alpha(opacity=30)}
+.vl-index .brand-list li a {display: block; width: 100%; height: 100%}
+.vl-index .brand-list img {vertical-align: middle; max-width: 100%; max-height: 100%;}
+.vl-index .brand-list-ctx {margin: 10px 0}
+.vl-index .brand-list-ctx .steps {display: none}
+.vl-index .brand-list-ctx .next,
+.vl-index .brand-list-ctx .prev {width: 30px; height: 113px; position: absolute; cursor: pointer; display: none; opacity: 0.4; filter: alpha(opacity=40); background: #fff}
+.vl-index .brand-list-ctx:hover .next,
+.vl-index .brand-list-ctx:hover .prev {display: block; opacity: 0.4; filter: alpha(opacity=40);}
+.vl-index .brand-list-ctx .next-s:active,
+.vl-index .brand-list-ctx .prev-s:active {opacity: 0.6; filter: alpha(opacity=60);}
+.vl-index .brand-list-ctx .next.not,
+.vl-index .brand-list-ctx .prev.not,
+.vl-index .brand-list-ctx:hover .next.not,
+.vl-index .brand-list-ctx:hover .prev.not {display: none}
+.vl-index .brand-list-ctx .prev {left: 0; top: 0;}
+.vl-index .brand-list-ctx .next {right: 0; top: 0;}
+.vl-index .brand-list-ctx .prev-s,
+.vl-index .brand-list-ctx .next-s {position: absolute; left: 50%; top: 50%; width: 20px; height: 28px; margin: -14px 0 0 -10px; background: url(../images/vl-index/icons.png?v=20150401) no-repeat -999px -999px}
+.vl-index .brand-list-ctx .prev-s {background-position: 0 -16px}
+.vl-index .brand-list-ctx .next-s {background-position: -56px -16px}
+.vl-index .block-banners {max-width: 1260px; min-width: 1024px; overflow: hidden; font-size: 0;}
+.vl-index .block-banners .col1,
+.vl-index .block-banners .col2 {position: relative; vertical-align: top; display: inline-block; *display: inline; *zoom: 1; font-size: 0; cursor: pointer}
+.vl-index .block-banners .col1 {width: 33.33%;}
+.vl-index .block-banners .col2 {width: 66.66%;}
+.vl-index .block-banners .col1:before,
+.vl-index .block-banners .col2:before {border: 1px solid #fff; box-sizing: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; width: 100%; height: 100%; content: ''; position: absolute; top: 0; left: 0; z-index: 2}
+.vl-index .block-banners .col1 a,
+.vl-index .block-banners .col2 a {display: block; width: 100%; height: 100%; position: relative;}
+.vl-index .block-banners .col2 iframe {position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0 none; z-index: 10;}
+.vl-index .block-banners .mask {width: 100%; height: 100%; content: ''; position: absolute; top: 0; left: 0; background: #000; opacity: 0; filter: alpha(opacity=0); transition: opacity 0.2s ease 0s;}
+.vl-index .block-banners .col1:hover .mask,
+.vl-index .block-banners .col2:hover .mask {opacity: 0.3; filter: alpha(opacity=30)}
+.vl-index .block-banners .col1 img,
+.vl-index .block-banners .col2 img {max-width: 100%; width: 100%;}
+.vl-index .service-phone {color: #333; line-height: 60px; text-align: center}
+.vl-index .service-phone b {font-size: 16px; font-weight: normal;}
+

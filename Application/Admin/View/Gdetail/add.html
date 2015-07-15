@@ -1,0 +1,213 @@
+<extend name="Public:layout" />
+<block name="main-content">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        
+         <link rel="stylesheet" href="__PUBLIC__/Admin/css/uploadify.css">
+        <script src='__PUBLIC__/Admin/js/jquery.js'></script>
+        <script src='__PUBLIC__/Admin/js/jquery.uploadify.min.js'></script>
+    </head>
+	<div class="main-content">
+					<div class="breadcrumbs" id="breadcrumbs">
+						<script type="text/javascript">
+							try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+						</script>
+
+						<ul class="breadcrumb">
+							<li>
+								<i class="icon-home home-icon"></i>
+								<a href="#">Home</a>
+							</li>
+
+							<li>
+								<a href="#">商品详情管理</a>
+							</li>
+							<li class="active">添加商品详情</li>
+						</ul><!-- .breadcrumb -->
+
+						<div class="nav-search" id="nav-search">
+							<form class="form-search">
+								<span class="input-icon">
+									<input type="text" placeholder="Search ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
+									<i class="icon-search nav-search-icon"></i>
+								</span>
+							</form>
+						</div><!-- #nav-search -->
+					</div>
+
+					<div class="page-content">
+						<div class="page-header">
+							<h1>
+								商品详情管理
+								<small>
+									<i class="icon-double-angle-right"></i>
+									添加商品详情
+								</small>
+							</h1>
+						</div><!-- /.page-header -->
+
+						<div class="row">
+							<div class="col-xs-12">
+								<!-- PAGE CONTENT BEGINS -->
+
+								<form class="form-horizontal" action="__URL__/insert" method="post" role="form" enctype="multipart/form-data">
+								    <div class="space-4"></div>
+									
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 商品ID：</label>
+
+										<div class="col-sm-9">
+										   <input type="text" id="form-field-2" name="gdetail_goodsid" placeholder="商品id" class="col-xs-10 col-sm-5" value="{$goods['goods_id']}" readonly/>
+										</div>
+									</div>
+									<div class="space-4"></div>
+									
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 商品名称：</label>
+
+										<div class="col-sm-9">
+										   <input type="text" id="form-field-2" placeholder="商品名称" class="col-xs-10 col-sm-5" value="{$goods['goods_goods']}" readonly/>
+										</div>
+									</div>
+									
+									<div class="space-4"></div>
+									
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 商品浏览：</label>
+
+										<div class="col-sm-9">
+										   <img width=60px height=60px src="__PUBLIC__/uploads/{$goods['goods_picname']}"/>
+										</div>
+									</div>
+									
+                                    <div class="space-4"></div>
+
+
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 图片1名：</label>
+									<div class="form-group">
+									    <input id="file_upload" name="gdetail_picname1" type="file" multiple="true" value="" />
+											
+										</div>
+										
+									</div>
+									<div class="space-4"></div>
+
+
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 图片2名：</label>
+									<div class="form-group">
+									   <input id="file_upload" name="gdetail_picname2" type="file" multiple="true" value="" />
+											
+										</div>
+										
+									</div>
+									<div class="space-4"></div>
+
+
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 图片3名 ：</label>
+									<div class="form-group">
+									    <input id="file_upload" name="gdetail_picname3" type="file" multiple="true" value="" />
+											
+										</div>
+										
+									</div>
+									<div class="space-4"></div>
+
+
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 图片4名：</label>
+									<div class="form-group">
+									    <input id="file_upload" name="gdetail_picname4" type="file" multiple="true" value="" />
+											
+										</div>
+										
+									</div>
+
+							
+                                    <div class="space-4"></div>
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 货 号：</label>
+
+										<div class="col-sm-9">
+											<input type="text" id="form-field-2" name="gdetail_gnum" placeholder="请添加货号" class="col-xs-10 col-sm-5" />
+											<span class="help-inline col-xs-12 col-sm-7">
+												<span class="middle">*</span>
+											</span>
+										</div>
+									</div>
+									<div class="space-4"></div>
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 材 质：</label>
+
+										<div class="col-sm-9">
+											<input type="text" id="form-field-2" name="gdetail_texture" placeholder="请说明材质" class="col-xs-10 col-sm-5" />
+											<span class="help-inline col-xs-12 col-sm-7">
+												<span class="middle">*</span>
+											</span>
+										</div>
+									</div>
+									<div class="space-4"></div>
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 产 地：</label>
+
+										<div class="col-sm-9">
+											<input type="text" id="form-field-2" name="gdetail_pplace" placeholder="请说明产地" class="col-xs-10 col-sm-5" />
+											<span class="help-inline col-xs-12 col-sm-7">
+												<span class="middle">*</span>
+											</span>
+										</div>
+									</div>
+                                    
+									<div class="space-4"></div>
+
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 描 述：</label>
+
+										<div class="col-sm-9">
+											<textarea cols="20" rows="4" id="form-field-2" name="gdetail_descr" placeholder="请说明描述" class="col-xs-10 col-sm-5" ></textarea>
+											<span class="help-inline col-xs-12 col-sm-7">
+												<span class="middle">*</span>
+											</span>
+										</div>
+									</div>
+									<div class="space-4"></div>
+
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 清洁与保养</label>
+
+										<div class="col-sm-9">
+											<textarea cols="20" rows="4" id="form-field-2" name="gdetail_clean" placeholder="请说明如何清洁与如何保养" class="col-xs-10 col-sm-5" ></textarea>
+											<span class="help-inline col-xs-12 col-sm-7">
+												<span class="middle">*</span>
+											</span>
+										</div>
+									</div>
+                                   
+									
+                                  
+							
+									<div class="clearfix form-actions">
+										<div class="col-md-offset-3 col-md-9">
+											<button class="btn btn-info" type="submit">
+												<i class="icon-ok bigger-110"></i>
+												Submit
+											</button>
+
+											&nbsp; &nbsp; &nbsp;
+											<button class="btn" type="reset">
+												<i class="icon-undo bigger-110"></i>
+												Reset
+											</button>
+										</div>
+									</div>
+                                  
+									</form>
+							</div>
+									</div><!-- /.col -->
+						</div><!-- /.row -->
+					</div><!-- /.page-content -->
+				</div><!-- /.main-content -->
+
+</block>

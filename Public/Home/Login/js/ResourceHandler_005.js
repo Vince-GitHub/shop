@@ -1,0 +1,1 @@
+﻿$(function(){SP.config={lazyload:null,weibo:{appKey:"1004138071",appSecret:"b173d6963e046e2a1cccd664e635701a",accessToken:"2.00LqyWBC2LQxFB65a88dcf35RivAgD"}};SP.config.lazyload=SP.plug.lazyload("img",null,{start:function(){this.css({opacity:0})},end:function(){this.animate({opacity:1},200)}})});

@@ -1,0 +1,116 @@
+<extend name="Public:layout" />
+<block name="main">
+	
+	<div class="vl-index">
+		
+		<!--首页大轮播图star-->
+		<div class="kv-ctx" style = "margin-top:30px">
+			<div class="carousel-wrap">
+					<div class="carousel-content" style="position: relative; height: 587px;">
+						<ul style="width: 5040px; left: -1260px; height: 587px;" class="kv">
+							
+						<foreach name="indexs" item="index">
+							<if condition="$index['index_id'] lt 5">
+							<li style="width: 1260px;">
+								<a target="_blank" href="__APP__/list/index">
+									<img src="__PUBLIC__/Home/Index/images/{$index['index_picname']}">
+								</a>
+							</li>
+							</if>
+						</foreach>
+						</ul>
+					</div>
+
+				<div class="carousel-control">
+					<span class="prev"><span class="prev-s"></span></span>
+					<span class="next"><span class="next-s"></span></span>
+					<ol class="steps">
+						<li class="step" data-step="0">0</li>
+						<li class="step current" data-step="1">1</li>
+					</ol>
+				</div>
+			</div>
+		</div>
+		<!--首页大轮播图stop-->	
+	
+		
+		<!--首页左右品牌滚动品牌栏star-->	
+		<div class="brand-list-ctx">
+		<div class="carousel-wrap" style="width:1260px;height:113px;">
+			<div class="carousel-content" style="position:relative;width:1260px;height:113px;">
+				<ul style="position: absolute; top: 0px; left: -3780px; width: 6300px; height:100%; overflow: visible;" class="brand-list">
+					
+					<foreach name="indexs" item="index">
+						<if condition="$index['index_id'] gt 5">
+							<li style="width: 251px; line-height: 113px;">
+								<a style="line-height: 113px;" target="_blank" href="__APP__/history/index" title="时尚品牌">
+									<span class="mask"></span>
+									<img src="__PUBLIC__/Home/Index/images/{$index['index_picname']}" alt="TOMBOLINI">
+								</a>
+							</li>
+						</if>
+					</foreach>
+					
+				</ul>
+			</div>
+			
+			
+			
+			<div class="carousel-control">
+				<span class="prev"><span class="prev-s"></span></span>
+				<span class="steps"><span data-step="0" class="step">1</span>
+					<span data-step="1" class="step">2</span>
+					<span data-step="2" class="step">3</span>
+					<span data-step="3" class="step current">4</span>
+					<span data-step="4" class="step">5</span>
+				</span>
+				<span class="next">
+					<span class="next-s"></span>
+				</span>
+			</div>
+		</div>
+	</div>
+		<!--首页左右品牌滚动品牌栏stop-->	
+	
+		
+		<!--首页方块栏目star-->
+		<div class="block-banners">
+		<div class="col2">
+			<a data-href="" data-type="" href="__APP__/history/index">
+				<span class="mask"></span>
+				<img src="__PUBLIC__/Home/Index/images/abc1.jpg" alt="机场时髦装  左上"></a>
+		</div>
+		<div class="col1">
+			<a data-href="" href="__APP__/history/index">
+				<span class="mask"></span>
+				<img src="__PUBLIC__/Home/Index/images/abc2.jpg" alt="MB（BTD81020U10010）"></a>
+		</div>
+		<div class="col1">
+			<a data-href="" href="__APP__/history/index">
+				<span class="mask"></span>
+				<img src="__PUBLIC__/Home/Index/images/abc3.jpg" alt="PF活动 左下"></a>
+		</div>
+		<div class="col2">
+			<a data-href="" data-type="" href="__APP__/history/index">
+				<span class="mask"></span>
+				<img src="__PUBLIC__/Home/Index/images/abc4.jpg" alt="拒绝朦胧美 你的世界应该更清晰  右下"></a>
+		</div>
+	</div>
+		<!--首页方块栏目stop-->
+		
+		
+		<!--首页页尾问题栏star-->
+		<div class="service-phone">
+			<marquee direction="left" scrollamount="6">
+				遇到任何问题，请拨打 VIPLUX 客服专线：<b>4009-209-209</b>
+			
+				&nbsp;&nbsp;
+				<foreach name="notices" item="notice">
+					
+				 {$notice[notice_title]}&nbsp;:&nbsp;&nbsp;{$notice[notice_descr]}；{$notice[notice_time]|date="Y-m-d",###}
+				</foreach>
+			</marquee>
+		</div>
+		<!--首页页尾问题栏stop-->
+	</div>
+</block>

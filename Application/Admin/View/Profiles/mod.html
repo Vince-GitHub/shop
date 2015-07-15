@@ -1,0 +1,153 @@
+<extend name="Public:layout" />
+<block name="main-content">
+	<div class="main-content">
+					<div class="breadcrumbs" id="breadcrumbs">
+						<script type="text/javascript">
+							try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
+						</script>
+
+						<ul class="breadcrumb">
+							<li>
+								<i class="icon-home home-icon"></i>
+								<a href="#">首页</a>
+							</li>
+
+							<li>
+								<a href="#">用户收货地址管理</a>
+							</li>
+							<li class="active">修改用户地址</li>
+						</ul><!-- .breadcrumb -->
+
+						<div class="nav-search" id="nav-search">
+							<form class="form-search">
+								<span class="input-icon">
+									<input type="text" placeholder="Search ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
+									<i class="icon-search nav-search-icon"></i>
+								</span>
+							</form>
+						</div><!-- #nav-search -->
+					</div>
+
+					<div class="page-content">
+						<div class="page-header">
+							<h1>
+								用户收货地址管理
+								<small>
+									<i class="icon-double-angle-right"></i>
+									修改用户地址
+								</small>
+							</h1>
+						</div><!-- /.page-header -->
+
+						<div class="row">
+							<div class="col-xs-12">
+								<!-- PAGE CONTENT BEGINS -->
+
+								<form class="form-horizontal" action="__CONTROLLER__/update" method="post" role="form">
+									<!--用户id-->
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1">用户id：</label>
+
+										<div class="col-sm-9">
+											<input type="text" id="form-field-1" name="profile_userid"  value="{$profile['profile_userid']}" class="col-xs-10 col-sm-5" />
+                                        </div>
+									</div>
+										
+									<!--所在地区-->
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1">所在地区：</label>
+
+										<div class="col-sm-9">
+											<input type="text" id="form-field-1" name="profile_region"  value="{$profile['profile_region']}" class="col-xs-10 col-sm-5" />
+                                            <span class="help-inline col-xs-12 col-sm-7">
+												<span class="middle">*</span>
+											</span>
+                                        </div>
+									</div>								
+									
+									<!--街道-->
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1">所在街道：</label>
+
+										<div class="col-sm-9">
+											<input type="text" id="form-field-1" name="profile_street"  value="{$profile['profile_street']}" class="col-xs-10 col-sm-5" />
+                                            <span class="help-inline col-xs-12 col-sm-7">
+												<span class="middle">*</span>
+											</span>
+                                        </div>
+									</div>									
+
+									<!--详细地址-->
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1">详细地址：</label>
+
+										<div class="col-sm-9">
+											<input type="text" id="form-field-1" name="profile_address"  value="{$profile['profile_address']}" class="col-xs-10 col-sm-5" />
+                                            <span class="help-inline col-xs-12 col-sm-7">
+												<span class="middle">*</span>
+											</span>
+                                        </div>
+									</div>	
+									
+									<!--收货人姓名-->
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1">收货人姓名：</label>
+
+										<div class="col-sm-9">
+											<input type="text" id="form-field-1" name="profile_name"  value="{$profile['profile_name']}" class="col-xs-10 col-sm-5" />
+                                            <span class="help-inline col-xs-12 col-sm-7">
+												<span class="middle">*</span>
+											</span>
+                                        </div>
+									</div>										
+						
+									<!--手机号码-->
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1">手机号码：</label>
+
+										<div class="col-sm-9">
+											<input type="text" id="form-field-1" name="profile_phone"  value="{$profile['profile_phone']}" class="col-xs-10 col-sm-5" />
+                                            <span class="help-inline col-xs-12 col-sm-7">
+												<span class="middle">*</span>
+											</span>
+                                        </div>
+									</div>	
+
+									<!--邮编-->
+									<div class="form-group">
+										<label class="col-sm-3 control-label no-padding-right" for="form-field-1">邮 编：</label>
+
+										<div class="col-sm-9">
+											<input type="text" id="form-field-1" name="profile_code" value="{$profile['profile_code']}" class="col-xs-10 col-sm-5" />
+                                            <span class="help-inline col-xs-12 col-sm-7">
+												<span class="middle">*</span>
+											</span>
+                                        </div>
+									</div>	
+									
+									<input type="hidden" name="profile_id" value="{$profile['profile_id']}"/>
+									
+									<div class="space-4"></div>
+
+									<div class="clearfix form-actions">
+										<div class="col-md-offset-3 col-md-9">
+											<button class="btn btn-info" type="submit">
+												<i class="icon-ok bigger-110"></i>
+												Submit
+											</button>
+
+											&nbsp; &nbsp; &nbsp;
+											<button class="btn" type="reset">
+												<i class="icon-undo bigger-110"></i>
+												Reset
+											</button>
+										</div>
+									</div>
+									
+									</form>
+									</div><!-- /.col -->
+						</div><!-- /.row -->
+					</div><!-- /.page-content -->
+				</div><!-- /.main-content -->
+
+</block>

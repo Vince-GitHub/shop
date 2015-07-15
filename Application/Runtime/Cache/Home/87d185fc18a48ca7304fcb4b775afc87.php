@@ -1,0 +1,1 @@
+<?php if (!defined('THINK_PATH')) exit(); if(is_array($flinks)): foreach($flinks as $key=>$flink): ?><li><a target="_blank" href="<?php echo ($flink[Flink_url]); ?>"><?php echo ($flink[Flink_name]); ?></a></li><?php endforeach; endif; ?>

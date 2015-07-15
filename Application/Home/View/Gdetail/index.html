@@ -1,0 +1,260 @@
+<extend name="Public:layout" />
+<block name="main">
+
+<meta name="description" content="白色镂空衬衫，隐隐透出小性感，前片的荷叶边设计又有小女孩的甜美。">
+<meta name="keywords" content="Magento, Varien, E-commerce">
+<meta name="robots" content="INDEX,FOLLOW">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="icon" href="" type="image/x-icon">
+<link rel="shortcut icon" href="" type="image/x-icon">
+
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/Gdetail/css/comm.css" media="all">
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/Gdetail/css/vl-global.css" media="all">
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/Gdetail/css/vl-common.css" media="all">
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/Gdetail/css/vl-product.css" media="all">
+<script type="text/javascript" src="__PUBLIC__/jquery.js"></script>
+<script type="text/javascript" src="__PUBLIC__/Home/Gdetail/js/vl.js"></script>
+<script type="text/javascript" src="__PUBLIC__/Home/Gdetail/js/vl-common.js"></script>
+<script type="text/javascript" src="__PUBLIC__/Home/Gdetail/js/messenger.js"></script>
+<script type="text/javascript" src="__PUBLIC__/Home/Gdetail/js/vl-product.js"></script>
+
+<script type="text/javascript">
+//<![CDATA[
+optionalZipCountries = ["HK","IE","MO","PA"];
+//]]>
+</script>
+<script type="text/javascript">
+	var cancelIconUrlForDialog = '';
+	var closeIconUrlForDialog = '';
+	var loginUrl  = '';
+	var logoutUrl = '';
+	var base_url  = '';
+</script>
+</head>
+<body class="catalog-product-view catalog-product-view product-product-s02dl0119n37371 middleSize">
+
+
+
+<div class="vl-product">
+    <!--右侧内容区-->
+    <div class="right-side">
+      
+	<form method="post" name="form1" action="__APP__/Gdetail/insert">
+        <!-- 要提交的表单项 -->
+        <input name="user_id" value="{$_SESSION['user']['users_id']}" type="hidden">
+        <input name="goods_id" value="{$goods['goods_id']}" id="sample_product_id" type="hidden">
+			<p class="brand">
+                <a href="" target="_blank" title="Just cavalli">Just cavalli</a>
+            </p>
+		
+        <p class="product-name">{$goods['goods_goods']}</p>
+        <div class="pro-price">
+          <p class="price-info hide-price">
+            
+            <span style="display: none;" class="price-off"><span class="discount-label"></span>折</span>
+            <span class="market-price">
+                <del><span class="old-price-label"><small>¥</small>{$goods['goods_price']+200}</span></del>
+            </span><span class="price-label"><span class="tip" style="font-size:30px">{$goods['goods_price']}</span></span>
+          </p>
+                  </div>
+        <div class="opts">
+                      <div mars_sead="220|10|2|1" class="collect" title="收藏" data-sku="S02DL0119N37371">收藏</div>
+                    <a class="share" data-share="weibo" data-url="" data-uid="" href="#" mars_sead="220|10|27297|1" title="分享">分享</a>
+        </div>
+        
+                    <div class="attrs">
+              <div data-attr-id="92" class="attribute-item color">
+      <p class="attr-name">厂 家：</p>
+      <p class="product-name">{$goods['goods_company']}</p>
+    </div>
+	<div data-attr-id="92" class="attribute-item color">
+      <p class="attr-name">简 介：</p>
+      <p class="product-name">{$goods['goods_descr']}</p>
+    </div>
+	<div data-attr-id="92" class="attribute-item color">
+      <p class="attr-name">库存量：</p>
+      <p class="product-name">{$goods['goods_store']}</p>
+    </div>
+	<div data-attr-id="92" class="attribute-item color">
+      <p class="attr-name">购买数量：</p>
+      <p class="product-name"><a class="amount_minus">-</a><input name="goods_num" value="1" type="text" size="2" id = "num"/><a class="amount_plus">+</a></p>
+    </div>
+	<div data-attr-id="92" class="attribute-item color">
+      <p class="attr-name">被购买数量：</p>
+      <p class="product-name">{$goods['goods_num']}</p>
+    </div>
+	<div data-attr-id="92" class="attribute-item color">
+      <p class="attr-name">点击次数：</p>
+      <p class="product-name">{$goods['goods_clicknum']}</p>
+    </div>
+            
+      </div>
+  
+  
+  <div id="product-images-for-share" style="display:none">
+          <img src="__PUBLIC__/uploads/{$goods['goods_picname']}" style="display:none">
+		  <foreach name="gdetails" item="gdetail">
+		  <if condition="$gdetail['gdetail_goodsid'] eq $goods['goods_id']">
+          <img src="__PUBLIC__/uploads/{$gdetail['gdetail_picname1']}" style="display:none">
+          <img src="__PUBLIC__/uploads/{$gdetail['gdetail_picname2']}" style="display:none">
+          <img src="__PUBLIC__/uploads/{$gdetail['gdetail_picname3']}" style="display:none">
+          <img src="__PUBLIC__/uploads/{$gdetail['gdetail_picname4']}" style="display:none">
+         
+      </div>
+            <script type="text/javascript">
+                var selectedColorId = 50;
+            </script>
+                          
+                
+                <div style="display: none;" class="to-try up-pop">
+          
+          <!--店铺地图-->
+          
+        </div>
+        <div class="btn-box">
+			<a href="__APP__/Share/add/gid/{$goods['goods_id']}">分享该商品</a>&nbsp;&nbsp;
+			<button type="button" class="apply_try" onclick="window.location='__APP__/Collect/add/id/{$goods['goods_id']}'">
+				收藏 商品
+			</button><i class="waring"></i>
+
+			  <button type="submit" class="apply_try" id="to_buy" mars_sead="220|10|27298|1">
+				加入购物袋
+			  </button><i class="waring"></i>
+        </div>
+        <ul class="service-area">
+          <li><b class="s1"></b>品牌官方授权</li>
+          <li><b class="s2"></b>全国范围配送</li>
+                      <li><b class="s3"></b>7天无理由退货</li>
+                    <li><b class="s5"></b>太平洋投保</li>
+        </ul>
+        <div class="details">
+          <div class="section product-info on">
+            <p class="section-name" mars_sead="220|10|27295|1">产品信息<b></b></p>
+            <div style="display: block;" class="ddl">
+                <ul>
+			        <li><strong>货号：</strong><span>{$gdetail['gdetail_gnum']}</span></li>
+			        <li><strong>材质：</strong><span>{$gdetail['gdetail_texture']}</span></li>
+				    <li><strong>产地：</strong><span>{$gdetail['gdetail_pplace']}</span></li>
+				    <li><strong>描述：</strong><span>{$gdetail['gdetail_descr']}</span></li>
+				    <li><strong>品牌归属：</strong><span>意大利</span></li>
+			    </ul>
+            </div>
+          </div>
+          <div class="section">
+            <p class="section-name" mars_sead="220|10|27308|1">清洁与保养<b></b></p>
+            <div class="ddl">{$gdetail['gdetail_clean']}</div>
+			
+          </div>
+		  
+          <div class="section">
+            <p class="section-name" mars_sead="220|10|27301|1">售后与三包说明<b></b></p>
+            <div class="ddl">
+              
+<p id="guarantee" style="width:100%;font-family:微软雅黑;line-height: 1.6em;max-width:640px;"><span style="color: #000">每一件VIPLUX唯风尚在线售卖的商品都有属于自己的售后服务吊牌。请保持售后服务吊牌完好，一经拆剪，将无法办理退货。敬请谅解，谢谢！</span><br>商品（非特殊商品）自签收之日起7天内，在未经穿着、不影响二次销售的情况下，唯风尚将为您提供七天无理由退货服务。<br>请您收货时务必仔细验货，特殊商品（如化妆品、贴身衣物、手表、珠宝、黄金饰品、家居、赠品等均属特殊商品）如遇非质量问题签收后，将无法享受七天无理由退货服务，请您谅解！<br>
+详情可见“<a href="" style="text-decoration: underline; color: #000">售后政策</a>”
+</p>
+<style>
+#guarantee {font-size: 13px}
+</style>            </div>
+          </div>
+          <div class="section product-info on">
+            <p class="section-name" mars_sead="220|10|27295|1">商品评论<b></b></p>
+            <div style="display: block;" class="ddl">
+                <ul>
+					<foreach name="comments" item="comment">
+					
+			        <li>
+                        --------------------------------------------------------<br/>					
+					    <foreach name="users" item="user">
+					    <if condition="$user['users_id'] eq $comment['comments_userid']"><strong><span><b>用户名</b>：{$user['users_name']}</span></if></foreach>
+					    <span><b>评论标题：</b>{$comment[comments_title]}</span>
+						<foreach name="commentdetails" item="commentdetail">
+					    <if condition="$commentdetail['commentDetail_commentid'] eq $comment['comments_id']"><strong><span><b>评论详情：</b>{$commentdetail['commentDetail_content']}</span></if></foreach>
+						<span><b>评论时间：</b>{$comment['comments_time'] | date="Y-m-d",###}</span>
+						--------------------------------------------------------
+					</li>
+						
+					</foreach>
+			    </ul>
+            </div>
+          </div>
+                    <div class="section to-brand">
+            <p class="section-name"><a href="" target="_blank" title="Just cavalli品牌主页">Just cavalli品牌主页<b></b></a></p>
+          </div>
+                  </div>
+      </form>
+    </div>
+    <!--左侧图区-->
+    <div class="left-side">
+  <div style="height: 620px;" class="zoom-box"><div class="cmZoom"><div class="small-img-box"><img class="small-img" src="__PUBLIC__/uploads/{$gdetail['gdetail_picname1']}"><div style="width: 250px; height: 310px;" class="range-box"></div></div><div mars_sead_hover="220|10|27305|1" class="big-img-box"><div style="width: 1000px; height: 1240px;" class="zoom-block"><img class="big-img" src="__PUBLIC__/uploads/{$gdetail['gdetail_picname1']}"></div></div></div></div>
+  <div class="box">
+    <div class="img-wrapper">
+      <div class="carousel-wrap" style="width: 440px; height: 107px;">
+	  <div class="carousel-content" style="position: relative; width: 440px; height: 107px;">
+	      <ul style="position: absolute; top: 0px; left: 0px; width: 528px; height: 100%; overflow: visible;" class="img-list">
+		      <li mars_sead_hover="220|10|27306|1" class="on" style="width: 88px; height: 92.5502px;">
+		          <div style="height: 92.5502px;" class="i-box"><img src="__PUBLIC__/uploads/{$goods['goods_picname']}"></div>
+		      </li>
+		      <li mars_sead_hover="220|10|27306|2" style="width: 88px; height: 92.5502px;"> 
+			      <div style="height: 92.5502px;" class="i-box"><img src="__PUBLIC__/uploads/{$gdetail['gdetail_picname1']}"></div>
+		      </li>
+			  <li mars_sead_hover="220|10|27306|3" style="width: 88px; height: 92.5502px;">
+			      <div style="height: 92.5502px;" class="i-box"><img src="__PUBLIC__/uploads/{$gdetail['gdetail_picname2']}"></div>
+			  </li>
+			  <li mars_sead_hover="220|10|27306|4" style="width: 88px; height: 92.5502px;">
+			      <div style="height: 92.5502px;" class="i-box"><img src="__PUBLIC__/uploads/{$gdetail['gdetail_picname3']}"></div>
+			  </li>
+			  <li mars_sead_hover="220|10|27306|5" style="width: 88px; height: 92.5502px;">
+			      <div style="height: 92.5502px;" class="i-box"><img src="__PUBLIC__/uploads/{$gdetail['gdetail_picname4']}"></div>
+			  </li>
+			  
+			</ul>
+			</div>
+			<div class="carousel-control"><span class="prev not"><span class="prev-s"></span></span><span class="steps"><span data-step="0" class="step current">1</span><span data-step="1" class="step">2</span></span><span class="next"><span class="next-s"></span></span></div></div>
+    </div>
+  </div>
+</div>
+</if>
+</foreach>
+    <!--底部内容区-->
+    <div class="hot-brand">
+          <p class="area-name">品牌热销<a target="_blank" href="">查看更多<b></b></a></p>
+        <div class="carousel-wrap" style="width:1260px;height:478px;">
+	        <div class="carousel-content" style="position:relative;width:1260px;height:478px;">
+		        <ul style="width: 6300px; position: absolute; top: 0px; left: 0px; height: 100%; overflow: visible;" class="items">
+				    <foreach name="hotgoods" item="hotgoods">
+                    <li>
+						<div class="item">
+							<div class="img-box" >
+								<div class="normal"><a target="_blank" href="__APP__/Gdetail/index/id/{$hotgoods['goods_id']}"><img src="__PUBLIC__/uploads/{$hotgoods['goods_picname']}" alt="{$hotgoods['goods_goods']}" title="{$hotgoods['goods_goods']}"></a></div>
+								<div class="hover"><a target="_blank" href="__APP__/Gdetail/index/id/{$hotgoods['goods_id']}"><img src="__PUBLIC__/uploads/{$hotgoods['goods_picname2']}" alt="{$hotgoods['goods_goods']}" title="{$hotgoods['goods_goods']}"></a></div>
+	                  	        <div class="try"><if condition="$hotgoods['goods_state'] eq 1"> 
+																新品上市
+																<elseif condition="$hotgoods['goods_state'] eq 2"/>在售<elseif condition="$hotgoods['goods_state'] eq 3"/>热销<elseif condition="$hotgoods['goods_state'] eq 4"/>掌柜推荐<else condition="$hotgoods['goods_state'] eq 5"/>已下架
+															</if></div>
+	                  	    </div>
+	                <p class="brand-name">Just cavalli</p>
+	                <p class="name"><a title="{$hotgoods['goods_goods']}" target="_blank" href="__APP__/Gdetail/index/id/{$hotgoods['goods_id']}">{$hotgoods['goods_goods']}</a></p>
+	                                  <div class="info no-login"><del>￥{$hotgoods['goods_price']+200}</del><span class="tip">{$hotgoods['goods_price']}</span></div>
+                  	</div>
+	            </li>
+				</foreach>
+    
+              </ul></div><div class="carousel-control"><span class="prev not"><span class="prev-s"></span></span><span class="steps"><span data-step="0" class="step current">1</span><span data-step="1" class="step">2</span><span data-step="2" class="step">3</span><span data-step="3" class="step">4</span><span data-step="4" class="step">5</span></span><span class="next"><span class="next-s"></span></span></div></div>
+        </div>
+   
+  </div>
+  <script type="text/javascript">
+      $(".amount_minus").click(function(){
+        
+		if($("#num").val()>1){
+		$("#num").val(parseInt($("#num").val())-1);
+		}
+
+	});
+	//增加按钮：
+	$(".amount_plus").click(function(){
+		$("#num").val(parseInt($("#num").val())+1);
+	});
+  </script>
+</block>

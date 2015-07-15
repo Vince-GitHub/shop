@@ -1,0 +1,155 @@
+<extend name = "Public:layout" />
+
+<block name="main">
+
+	<link href="__PUBLIC__/HOME/myOrder/ResourceHandler_004.css" rel="stylesheet" type="text/css">
+    <link href="__PUBLIC__/HOME/myOrder/ResourceHandler_002.css" rel="stylesheet" type="text/css">
+    <link href="__PUBLIC__/HOME/myOrder/ResourceHandler_003.css" rel="stylesheet" type="text/css">
+ 
+    <script src="" type="text/javascript" charset="utf-8"></script>
+
+    
+    <link href="__PUBLIC__/HOME/myOrder/ResourceHandler.css" rel="stylesheet" type="text/css">
+    <link href="__PUBLIC__/HOME/myOrder/ResourceHandler_007.css" rel="stylesheet" type="text/css">
+    <link href="__PUBLIC__/HOME/myOrder/ResourceHandler_005.css" rel="stylesheet" type="text/css">
+    <link href="__PUBLIC__/HOME/myOrder/ResourceHandler_006.css" rel="stylesheet" type="text/css">
+
+    <script charset="utf-8" src="__PUBLIC__/HOME/myOrder/kf_9986_kf_9986_1355827406710.js" async="" type="text/javascript"></script>
+    <script charset="utf-8" src="__PUBLIC__/HOME/myOrder/userinfo.php" async="" type="text/javascript"></script>
+    <script charset="utf-8" src="__PUBLIC__/HOME/myOrder/ntchat.js" async="" type="text/javascript"></script>
+
+<div class="box" id="sp_newHeader">
+    <!--sp-header-midbar begin-->
+    <div id="sp-header-midbar" class="clr">
+        <div class="logowrap flt">
+           
+            <a href="__APP__/myCenter" title="用户中心">
+                <img src="__PUBLIC__/HOME/myOrder/logo_member_new.jpg" alt="用户中心" height="38" width="105"></a>
+            </div>
+        <div id="sp-header-topbar" class="frt">
+            <ul class="clr">
+                <li><a href="">唯风尚</a></li>
+                <li><a href="">奥莱vip</a></li>
+                <li><a href="">手机vip</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="member_wrapper">
+        <!--member Start-->
+        <div class="box clr">
+<div id="member_left" class="flt">
+    <div class="member_leftMenu">
+        <h6>交易管理</h6>
+        <ul>
+            <li><a id="OrderList" href="__APP__/myOrder">我的订单</a></li>
+
+        </ul>
+        
+		<h6>我的收藏</h6>
+        <ul>
+            <li><a id="FavoriteProduct" href="__APP__/Collect">我的商品收藏</a></li>
+            <li><a id="FavoriteProduct" href="__APP__/Profiles">其他收货地址</a></li>
+		</ul>		
+       
+        
+        <h6>分享与关注</h6>
+        <ul>
+            <li><a id="FavoriteBrand" href="__APP__/Share/detail">我的分享</a></li>
+        </ul>
+		
+		
+		<h6>账户管理</h6>
+        <ul>
+            <li><a class="curr" id="UserInfo" href="__APP__/myCenter">账户信息</a></li>
+            
+           <li><a id="ChangePwd" href="__CONTROLLER__/repass">修改密码</a></li>
+        </ul>
+
+        <h6>我的评论</h6>
+        <ul>
+            <li><a id="FavoriteBrand" href="__APP__/Comments">浏览评论</a></li>
+        </ul>
+    
+	</div>
+</div>
+          
+<!--member rightSidebar Start -->
+<div id="member_right" class="flt">
+    <input id="flag" value="" type="hidden">
+    <h2>
+        我的分享<a href="__APP__/List/index" class="mobiapp">+添加分享,请到商品详情页</a>
+    </h2>
+    
+    <!-- orderList Start -->
+    <div id="spTabs">
+        
+        <div class="member_content" id="spTabs_content">
+                <!-- 暂无数据 Start -->
+                 <table class="prodList" border="0" cellpadding="0" cellspacing="0">
+                            <colgroup>
+                                <col width="100">
+                                <col width="160">
+                                <col width="150">
+                                <col width="150">
+                                <col width="110">
+                                <col width="110">
+                                <col>
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                	<th>标题</th>
+                                    <th>内容</th>
+                                    <th>商品名称</th>
+                                    <th>商品图片</th>
+                                    <th>分享时间</th>
+                                    <th>操 作</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            <!-- 遍历表内容并输出 -->
+                                <foreach name="shares" item="share">
+                                <tr style="border-bottom:1px solid #ccc">
+                                    <!--评论标题-->
+                                    <td>{$share['share_title']}</td>
+                                    <!--评论内容-->
+									<td>{$share['share_content']}</td>
+
+									<!--根据商品ID查看商品名称-->
+									<td>
+										<foreach name="goods" item="good">
+										<if condition="$good['goods_id'] eq $share['share_goodsid']">	
+											{$good['goods_goods']}</if>
+										</foreach>
+									</td>
+									
+									<!--根据商品ID查看商品图片-->
+									<td>
+										<foreach name="goods" item="good">
+										<if condition="$good['goods_id'] eq $share['share_goodsid']">	
+										<img width=60px height=60px src="__PUBLIC__/uploads/{$good['goods_picname']}"/>
+										</if>
+										</foreach>
+									</td>
+									
+									<!--分享时间-->
+                                    <td>{$share['share_time']|date="Y-m-d H:i",###}</td>
+                                    <td><a href="__APP__/share/del/id/{$share['share_id']}">删除</a></td>
+                                </tr>
+                                </foreach>
+                            </tbody>
+                        </table>
+ 
+        </div>
+    </div>
+    <!-- orderList End -->
+    <!-- pages Start -->
+    <!-- pages End -->
+</div>
+<!--member rightSidebar End -->
+
+        </div>
+    </div>
+
+</block>

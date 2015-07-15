@@ -1,0 +1,43 @@
+/* popup */
+.cmMask {background: none repeat scroll 0 0 black; height: 100%; left: 0; opacity: 0.6; filter: alpha(opacity=60); position: absolute; top: 0; visibility: hidden; width: 100%; z-index: 1000;}
+.cmDialog {display: none;}
+.cmDialogReady {display: block; left: -999px; position: absolute; top: -999px; z-index: 1100;}
+.cmLoading {display: block; left: -999px; position: absolute; top: -999px; z-index: 1200;}
+.cmLoading {width: 400px; padding: 50px 0; background: url(../images/common/loading.gif) no-repeat -50px -35px #fff; border: 6px solid #414141; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); color: #555555; border-radius: 6px;}
+.cmLoading p {display: block; line-height: 1.4em; color: #333; font-size: 18px; text-align: center;}
+.cmDialogReady {background: #fff;}
+.cmDialogReady .dialog-inner {padding: 20px;}
+.cmDialogReady a.close-dialog {position: absolute; right: 12px; top: 12px; z-index: 10;}
+.cmDialogReady a.close-dialog {background: url(../images/common/close-bg.png) no-repeat center center transparent; width: 12px; height: 12px;}
+.cmDialogReady a.close-dialog:hover {opacity: 0.8; filter: alpha(opacity=80);}
+.alert-box {min-height: 160px; width: 410px; border: 5px solid #baa67d; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);}
+.alert-box a.close-dialog {top: 0}
+.alert-box .alert-box-inner {padding: 50px;}
+.alert-box .alert-title {margin: 0; position: absolute; top: -5px; left: 0; height: 26px; width: 100%; text-indent: 4px; line-height: 26px; color: #fff; background: #baa67d}
+.alert-box .alert-box-inner div.icon {float: left; width: 0;}
+.alert-box.success .alert-box-inner div.icon {/*background: url("alert.jpg") no-repeat scroll 0 0 transparent;*/ height: 60px; width: 50px;}
+.alert-box.error .alert-box-inner div.icon {/*background: url("alert.jpg") no-repeat scroll 0 -120px transparent;*/ height: 60px; width: 50px;}
+.alert-box.delete .alert-box-inner div.icon {/*background: url("alert.jpg") no-repeat scroll 0 -60px transparent;*/ height: 60px; width: 50px;}
+.alert-box .alert-box-inner div.text {font-family: Verdana,Arial,simhei,sans-serif; font-size: 18px; padding-top: 10px;}
+.alert-box .alert-box-inner div.text {font-family: '微软雅黑';}
+.alert-box .alert-box-inner div.text p {margin-bottom: 10px;}
+.alert-box.success .alert-box-inner div.text {font-size: 25px;}
+.alert-box.success .alert-box-inner div.text, .alert-box.error .alert-box-inner div.text {margin-left: 0px;}
+.alert-box.success .alert-box-inner div.text {color: #8f8;}
+.alert-box.error .alert-box-inner div.text {color: #f88;}
+.confirm-box {min-height: 160px; width: 410px; border: 5px solid #baa67d; box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);}
+.confirm-box a.close-dialog {top: 0}
+.confirm-box .alert-box-inner {padding: 50px 50px 30px;}
+.confirm-box .alert-title {margin: 0; position: absolute; top: -5px; left: 0; height: 26px; width: 100%; text-indent: 4px; line-height: 26px; color: #fff; background: #baa67d}
+.confirm-box .alert-box-inner div.icon {float: left; width: 0;}
+.confirm-box .alert-box-inner div.text {font-family: Verdana,Arial,simhei,sans-serif; font-size: 18px; padding-top: 10px;}
+.confirm-box .alert-box-inner div.text {font-family: '微软雅黑';}
+.confirm-box .alert-box-inner div.text p {margin-bottom: 10px;}
+.confirm-box .confirm-btn-box {padding: 50px 0 0; text-align: center}
+.confirm-box .confirm-ok-btn {text-decoration: none; display: inline-block; *display: inline; *zoom: 1; padding: 5px 20px; color: #fff; background: #baa67d; margin: 0 10px}
+.confirm-box .confirm-cancel-btn {text-decoration: none; display: inline-block; *display: inline; *zoom: 1; padding: 5px 20px; margin: 0 10px}
+.confirm-box .confirm-ok-btn:hover,
+.confirm-box .confirm-cancel-btn:hover {opacity: 0.7; filter: alpha(opacity=70)}
+
+/* scroll */
+.carousel-wrap {overflow: hidden; position: relative;}

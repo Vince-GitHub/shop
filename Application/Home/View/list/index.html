@@ -1,0 +1,58 @@
+<extend name="Public:layout" />
+<block name="main">
+
+
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<meta name="description" content="VIPLUX">
+	<meta name="keywords" content="VIPLUX">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/List/css/vl-category.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/List/css/comm.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/List/css/vl-global.css">
+	<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/List/css/vl-common.css">
+	
+
+<body class="middleSize">
+	<script type="text/javascript" src="__PUBLIC__/Home/List/js/vl-category.js"></script>
+
+	<div class="vl-category" data-id="men" data-key="men">
+  	<div class="product-list tab-item">
+        
+    	
+		<ul class="items">
+        <foreach name="goodss" item="goods">
+	
+	            <li>
+	              <div class="item">
+	                <div class="img-box" >
+	                  <div class="normal"><a target="_blank" href="__APP__/Gdetail/index/id/{$goods['goods_id']}"><img src="__PUBLIC__/uploads/{$goods['goods_picname']}" alt="{$goods['goods_goods']}" title="{$goods['goods_goods']}"></a></div>
+	                  <div class="hover"><a target="_blank" href="__APP__/Gdetail/index/id/{$goods['goods_id']}"><img src="__PUBLIC__/uploads/{$goods['goods_picname2']}" alt="{$goods['goods_goods']}" title="{$goods['goods_goods']}"></a></div>
+	                  	                  <div class="try"><if condition="$goods['goods_state'] eq 1"> 
+																新品上市
+																<elseif condition="$goods['goods_state'] eq 2"/>在售<elseif condition="$goods['goods_state'] eq 3"/>热销<elseif condition="$goods['goods_state'] eq 4"/>掌柜推荐<else condition="$goods['goods_state'] eq 5"/>已下架
+															</if></div>
+	                  	                  
+	                  	                  
+	                </div>
+	                <p class="brand-name">Just cavalli</p>
+	                <p class="name"><a title="{$goods['goods_goods']}" target="_blank" href="__APP__/Gdetail/index/id/{$goods['goods_id']}">{$goods['goods_goods']}</a></p>
+	                                  <div class="info no-login"><del>￥{$goods['goods_price']+200}</del><span class="tip">￥{$goods['goods_price']}</span></div>
+                  	</div>
+	            </li>
+		
+	</foreach>
+	</ul>
+    <div>
+	    <ul>
+		
+			<li><a href="">{$page}</a></li>
+			
+		</ul>
+	</div>
+  </div>
+</div>
+</body>
+</html>
+
+</block>

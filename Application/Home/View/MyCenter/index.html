@@ -1,0 +1,199 @@
+<extend name = "Public:layout" />
+
+<block name="main">
+    <link href="__PUBLIC__/HOME/myCenter/ResourceHandler_007.css" rel="stylesheet" type="text/css">
+    <link href="__PUBLIC__/HOME/myCenter/ResourceHandler_002.css" rel="stylesheet" type="text/css">
+    <link href="__PUBLIC__/HOME/myCenter/ResourceHandler_005.css" rel="stylesheet" type="text/css"> 
+    <link href="__PUBLIC__/HOME/myCenter/ResourceHandler_008.css" rel="stylesheet" type="text/css">
+    <link href="__PUBLIC__/HOME/myCenter/ResourceHandler_006.css" rel="stylesheet" type="text/css">
+    <link href="__PUBLIC__/HOME/myCenter/ResourceHandler.css" rel="stylesheet" type="text/css">
+    <link href="__PUBLIC__/HOME/myCenter/ResourceHandler_004.css" rel="stylesheet" type="text/css">
+    <link href="__PUBLIC__/HOME/myCenter/ResourceHandler_003.css" rel="stylesheet" type="text/css">
+    <link href="__PUBLIC__/HOME/myCenter/ResourceHandler_009.css" rel="stylesheet" type="text/css">
+
+    
+<div class="box" id="sp_newHeader">
+    <!--sp-header-midbar begin-->
+    <div id="sp-header-midbar" class="clr">
+        <div class="logowrap flt">
+           
+            <a href="" title="用户中心">
+                <img src="__PUBLIC__/HOME/myCenter/logo_member_new.jpg" alt="用户中心" height="38" width="105"></a>
+            </div>       
+    </div>
+</div>
+
+    <div class="member_wrapper">
+        <!--member Start-->
+        <div class="box clr">
+
+
+	
+
+<div id="member_left" class="flt">
+    <div class="member_leftMenu">
+        <h6>交易管理</h6>
+        <ul>
+            <li><a id="OrderList" href="__APP__/myOrder">我的订单</a></li>
+
+        </ul>
+        
+		<h6>我的收藏</h6>
+        <ul>
+            <li><a id="FavoriteProduct" href="__APP__/Collect">我的商品收藏</a></li>
+            <li><a id="FavoriteProduct" href="__APP__/Profiles">其他收货地址</a></li>
+		</ul>		
+       
+        
+        <h6>分享与关注</h6>
+        <ul>
+            <li><a id="FavoriteBrand" href="__APP__/Share/detail">我的分享</a></li>
+        </ul>
+		
+		
+		<h6>账户管理</h6>
+        <ul>
+            <li><a class="curr" id="UserInfo" href="__APP__/myCenter">账户信息</a></li>
+            
+           <li><a id="ChangePwd" href="__CONTROLLER__/repass">修改密码</a></li>
+        </ul>
+
+        <h6>我的评论</h6>
+        <ul>
+            <li><a id="FavoriteBrand" href="__APP__/Comments">浏览评论</a></li>
+        </ul>
+    
+	</div>
+</div>
+
+<div id="member_right" class="flt">
+    <h2>
+        账户信息</h2>
+    
+<form action="__APP__/MyCenter/update" enctype="multipart/form-data" id="accountfrom" method="post" name="accountfrom" >        
+
+	<div id="spTabs" style="margin-top: 10px;">
+            
+            <div class="member_content" id="spTabs_content">
+                <div tabcontent="mytab-1" class="member_tebcell">
+                    <!-- 基本信息 Start -->
+                    <div id="member_userinfo" class="clr">
+					    
+                        <div id="member_userphoto">
+                            <a href="javascript:;">
+                                <img src="__PUBLIC__/uploads/{$user['users_icon']}" height="100" width="100"></a> <a class="weibo" href="">
+							    
+                                    账号绑定
+                                </a>
+                            <p>
+                                <em></em></p>
+                        </div>
+                        
+						<div id="member_user_content">
+						<div id="spAccount-myinfo_form" class="clr">
+						<input type="hidden" name="users_id" value="{$user['users_id']}">
+                                <dl>
+                                    <dt><em>*</em> 账号：</dt>
+                                    <dd>{$user['users_account']}</dd>
+                                </dl>
+                                
+								<dl>
+                                    <dt>真实姓名：<em>*</em> </dt>
+                                    <dd>
+                                        <span>
+                                            <input name="users_name" id="info_usernickname" value="{$user['users_name']}"type="text"/>
+                                        </span>
+                                    </dd>
+                                </dl>
+
+                                <dl>
+                                    <dt><em>*</em> 性别：</dt>
+                                    
+										
+											<input name="users_sex" class="ace" type="radio" 
+											{$user['users_sex']==1?'checked': ''} value=1 >
+											<span class="lbl"> 男</span>  
+									
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+										
+											<input name="users_sex" class="ace" type="radio" 
+											{$user['users_sex']==0?'checked': ''} value=0>
+											<span class="lbl"> 女</span>
+									
+                                  
+                                </dl>
+                                <dl id="mobilearea">
+                                    <dt>用户头像：</dt>
+                                   
+                                                <input id="file_upload" name="users_icon" type="file" multiple="true" value="{$user[users_icon]}" />
+												<input type="hidden" name="oldpic" value="{$user[users_icon]}">
+
+                                </dl>
+							    <dl>
+                                    <dt>地址：<em>*</em> </dt>
+                                    <dd>
+                                        <span>
+                                            <input name="users_address" id="info_usernickname" value="{$user['users_address']}"type="text"/>
+                                        </span>
+                                    </dd>
+                                </dl>  
+							  
+								<dl id="mobilearea">
+                                    <dt>手机号码：</dt>
+                                    <dd>
+                                        <span>
+                                                <input name="users_phone" value="{$user['users_phone']}" id="info_mobile"  type="text">
+
+                                        </span>
+                                        <div>
+                                                <em class="ac_green phone_hastest">已绑定</em><a href="javascript:;" id="changemobile">修改绑定手机</a>
+                                        </div>
+                                    </dd>
+                                </dl>
+                                <dl id="emailarea">
+                                    <dt>E-mail：</dt>
+                                    <dd>
+                                        <span>
+                                            <input name="users_email" value="{$user[users_email]}" id="info_email" readonly="readonly" type="text">
+                                        </span>
+                                        <div>
+                                                <em class="email_notest">未绑定</em><a href="javascript:;" id="bindemail1">绑定电子邮箱</a>
+                                        </div>
+                                    </dd>
+                                </dl>
+                               
+                                <dl>
+                                    <dt>邮政编码：</dt>
+                                    <dd>
+                                        <span>
+                                            <input name="users_code" value="{$user['users_code']}" id="info_code" type="text">
+                                        </span>
+                                    </dd>
+                                </dl>
+                                <dl class="sp_newpai">
+                                    <dt></dt>
+                                    <dd>
+                                        <input value="保存" class="member_info_subbtn" id="info_submit" type="submit">
+                                        <input class="member_info_canclebtn" name="" value="取消" onclick="cancelOpertion()" type="button">
+                                        <i class="form_succeed" style="display: none;">保存成功</i></dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 基本信息 End -->
+                </div>
+            </div>
+        </div>
+		
+</form>
+
+</div>
+
+
+        </div>
+    </div>
+    <div id="spFooter" class="box mgt10 relt">
+</div>
+
+
+</block>

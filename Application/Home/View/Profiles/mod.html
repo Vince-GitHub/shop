@@ -1,0 +1,163 @@
+<extend name = "Public:layout" />
+
+<block name="main">
+    <link href="__PUBLIC__/HOME/myCenter/ResourceHandler_007.css" rel="stylesheet" type="text/css">
+    <link href="__PUBLIC__/HOME/myCenter/ResourceHandler_002.css" rel="stylesheet" type="text/css">
+    <link href="__PUBLIC__/HOME/myCenter/ResourceHandler_005.css" rel="stylesheet" type="text/css">
+
+    <script src="" type="text/javascript" charset="utf-8"></script>
+    <script src="__PUBLIC__/HOME/myCenter/semwl.js" type="text/javascript"></script><script type="text/javascript" src="__PUBLIC__/HOME/myCenter/seo.htm"> </script>
+    
+    <link href="__PUBLIC__/HOME/myCenter/ResourceHandler_008.css" rel="stylesheet" type="text/css">
+    <link href="__PUBLIC__/HOME/myCenter/ResourceHandler_006.css" rel="stylesheet" type="text/css">
+    <link href="__PUBLIC__/HOME/myCenter/ResourceHandler.css" rel="stylesheet" type="text/css">
+    <link href="__PUBLIC__/HOME/myCenter/ResourceHandler_004.css" rel="stylesheet" type="text/css">
+    <link href="__PUBLIC__/HOME/myCenter/ResourceHandler_003.css" rel="stylesheet" type="text/css">
+    <link href="__PUBLIC__/HOME/myCenter/ResourceHandler_009.css" rel="stylesheet" type="text/css">
+    
+<div class="box" id="sp_newHeader">
+    <!--sp-header-midbar begin-->
+    <div id="sp-header-midbar" class="clr">
+        <div class="logowrap flt">
+           
+            <a href="" title="用户中心">
+                <img src="__PUBLIC__/HOME/myCenter/logo_member_new.jpg" alt="用户中心" height="38" width="105"></a>
+            </div>       
+    </div>
+</div>
+
+    <div class="member_wrapper">
+        <!--member Start-->
+        <div class="box clr">
+
+
+	
+
+<div id="member_left" class="flt">
+    <div class="member_leftMenu">
+        
+		<h6>交易管理</h6>
+        <ul>
+            <li><a id="OrderList" href="__APP__/myOrder">我的订单</a></li>
+
+        </ul>
+        
+		<h6>我的收藏</h6>
+        <ul>
+            <li><a id="FavoriteProduct" href="__APP__/Collect">我的商品收藏</a></li>
+            <li><a class="curr" id="FavoriteProduct" href="__APP__/Profiles">其他收货地址</a></li>
+		</ul>		
+       
+        
+        <h6>分享与关注</h6>
+        <ul>
+            <li><a id="FavoriteBrand" href="__APP__/Share">我的分享</a></li>
+        </ul>
+		
+		
+		<h6>账户管理</h6>
+        <ul>
+            <li><a  id="UserInfo" href="__APP__/myCenter">账户信息</a></li>
+            
+           <li><a id="ChangePwd" href="__CONTROLLER__/repass">修改密码</a></li>
+        </ul>
+
+        <h6>我的评论</h6>
+        <ul>
+            <li><a id="FavoriteBrand" href="__APP__/Comments">浏览评论</a></li>
+        </ul>
+    
+	</div>
+</div>
+
+<div id="member_right" class="flt">
+    <h2>修改收货地址</h2>
+    
+<form action="__APP__/profiles/update" id="accountfrom" method="post" name="accountfrom">  
+
+		<input type="hidden" name="profile_id" value="{$profile['profile_id']}">
+	<div id="spTabs" style="margin-top: 10px;">
+            <div class="member_content" id="spTabs_content">
+                <div tabcontent="mytab-1" class="member_tebcell">
+                    <!-- 基本信息 Start -->
+                    <div id="member_userinfo" class="clr">
+                        <div id="member_user_content">
+
+                            <div id="spAccount-myinfo_form" class="clr">
+                                
+								<dl>
+                                    <dt><em>*</em>所在地区：</dt>
+                                    <dd>
+                                        <span>
+                                            <input name="profile_region"  value="{$profile['profile_region']}" id="info_mobile" >
+                                        </span>
+                                    </dd>
+                                </dl>
+                                
+								<dl>
+                                    <dt><em>*</em>街 道：</dt>
+                                    <dd>
+                                        <span>
+                                            <input name="profile_street"  value="{$profile['profile_street']}" id="info_mobile"  type="text">
+                                        </span>
+                                    </dd>
+                                </dl>
+                                
+								<dl>
+                                    <dt>详细地址：</dt>
+                                    <dd>
+                                        <span>
+                                            <input name="profile_address" value="{$profile['profile_address']}"  id="info_mobile"  type="text">
+                                        </span>
+                                    </dd>>
+                                </dl>
+                                
+                                <dl>
+                                    <dt>收件人姓名：</dt>
+                                    <dd>
+                                        <span>
+                                            <input name="profile_name" value="{$profile['profile_name']}"  id="info_mobile"  type="text">
+                                        </span>
+                                    </dd>
+                                </dl>
+                                <dl id="mobilearea">
+                                    <dt>手机号码：</dt>
+                                    <dd>
+                                        <span>
+                                            <input name="profile_phone" value="{$profile['profile_phone']}"  id="info_mobile"  type="text">
+                                        </span>
+                                        <div>
+                                                <em class="ac_green phone_hastest">已绑定</em><a href="#" id="changemobile">修改绑定手机</a>
+                                        </div>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt>邮政编码：</dt>
+                                    <dd>
+                                        <span>
+                                            <input name="profile_code" value="{$profile['profile_code']}" id="info_code" type="text">
+                                        </span>
+                                    </dd>
+                                </dl>
+                                <dl class="sp_newpai">
+                                    <dd>
+                                        <button value="submit" class="member_info_subbtn" id="submit" type="submit">保 存</button>
+                                        <button type="reset" class="member_info_canclebtn">重 置</button>
+                                        <i class="form_succeed" style="display: none;">保存成功</i></dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 基本信息 End -->
+                </div>
+            </div>
+        </div>
+</form>
+</div>
+        </div>
+    </div>
+    <div id="spFooter" class="box mgt10 relt">
+</div>
+
+
+</block>

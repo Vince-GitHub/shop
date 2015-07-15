@@ -1,0 +1,366 @@
+<extend name="Public:layout"/>
+<block name="main">
+	<script src="__PUBLIC__/HOME/jquery.js"></script>
+	<link rel="shortcut icon" href="http://pic11.shangpin.com/shangpin/images/logo/favicon.ico">
+    <link href="__PUBLIC__/HOME/cart/ResourceHandler_005.css" rel="stylesheet" type="text/css">
+    <link href="__PUBLIC__/HOME/cart/ResourceHandler_002.css" rel="stylesheet" type="text/css">
+    <link href="__PUBLIC__/HOME/cart/ResourceHandler_007.css" rel="stylesheet" type="text/css">
+    <link href="__PUBLIC__/HOME/cart/ResourceHandler_003.css" rel="stylesheet" type="text/css">
+
+    
+    <link href="__PUBLIC__/HOME/cart/ResourceHandler_004.css" rel="stylesheet" type="text/css">
+    <link href="__PUBLIC__/HOME/cart/ResourceHandler_006.css" rel="stylesheet" type="text/css">
+    <link href="__PUBLIC__/HOME/cart/ResourceHandler.css" rel="stylesheet" type="text/css">
+
+<!--order Start-->
+<div class="box" style="overflow: visible; position:relative; z-index:9">
+    <div class="clr">
+        <div class="spLogo">
+            <a href="" title="唯尚风-全球时尚轻侈第一站">
+  				&nbsp; <b>唯风尚</b>-全球时尚轻侈第一站
+            </a>
+        </div>
+        <ul class="alCart_Step msh">
+            <li class="cur">
+                <p><em>1</em>我的购物车</p>
+                <span></span>
+            </li>
+            <li>
+                <p><em>2</em>填写订单信息</p>
+                <span></span>
+            </li>
+            <li class="last_step">
+                <p><em>3</em>成功提交订单</p>
+            </li>
+        </ul>
+    </div>
+    <div class="alCart_notice">温馨提示：购物车中的商品无法保留库存，请您及时结算。</div>
+
+<form action="__CONTROLLER__/insert" method="post">
+    <div id="spTabs" class="clr">
+        <!--tab切换 start-->
+        
+        <!--tab切换 end-->
+        <div class="alCart_proList" id="spTab_content">
+            <!--大陆购物start-->
+            <div class="mainland_shopping" tabcontent="mytab-1"> 
+                <div class="alCart_table_th">
+                    <ul class="clr">
+                        <li class="th th_chk">
+                            <label><input  class="checkAllBtn" name="" value="" type="checkbox">全选</label>
+                        </li>
+                        <li class="th th_item">商品信息</li>
+                        <!-- <li class="th th_">商品名称</li>
+                        <li class="th th_">商品简介</li> -->
+                        <li class="th th_price">商品单价</li>
+                        <li class="th th_amount">数量</li>
+                        <li class="th th_sum">小计</li>
+                        <li class="th th_op">操作</li>
+                    </ul>
+                </div>
+                <div class="cart_list_wp">
+                    <div class="cart_list">
+                        <div class="cart_list_title">
+                            您在<span>唯风尚(viplux.com)</span>选购的商品  :
+                        </div>
+                        <div class="_cart_list_content">
+                            <div class="cart_content_table">
+                            	<div class="tr cur" proid="201504141151505534" stock="1">
+
+                            		<if condition="$_SESSION['cartlist'] eq null">
+                                        <!-- 若已登录，遍历cart购物车表 输出到购物车列表 -->
+                                    <foreach name="carts"  item="cart">
+                                    
+                                    <ul class="clr">
+                                        <li class="td td_chk">
+                                            <input id="box" class="checkList" type="checkbox">
+                                        </li>
+
+                                        <li class="td td_item">
+                                            <div class="td_item_img">
+                                                <a href="__APP__/Gdetail/index/id/{$cart['goods_id']}"  >
+                                                    <img style="opacity: 1;" src="__PUBLIC__/Uploads/{$cart['goods_pic']}" height="120" width="90"></a>
+                                            </div>
+
+                                            <div class="td_item_title clr">
+                                                <p>
+                                                    <a href="" >{$cart['goods_name']}</a>
+                                                </p>
+                                                <br/>
+                                                <p>
+                                                    <a href="">{$cart['goods_descr']}</a>
+                                                </p>
+                                                <br/>
+                                                <p class="padt5">
+                                                    <a href="">
+                                                        <span class="color" title="颜色:混合色 尺码:均码">
+                                                            <em>颜色</em>:混合色 <em>尺码</em>:均码
+                                                        </span>
+
+                                                    </a>
+                                                </p>
+                                            </div>
+                                        </li>
+
+                                        <li class="td td_price">
+                                            <em class="RedPromotional">
+                                                <i class="price_sign">¥</i>
+                                                <b class="price_new">{$cart['goods_price']}</b>
+                                            </em>
+                                        </li>
+
+                                        <li class="td td_amount">
+
+                                            <div class="amount_change" proid="201504141151505534">
+                                                <!-- 商品id -->
+                                                <input type="hidden" 
+                                                    name= "g_id" 
+                                                value="{$cart['goods_id']}"/>
+                                                <a class="amount_minus" 
+                                                ></a>
+
+                                                <input id="goods_num"
+                                                    name="g_num"
+                                                class="amount_val" name="" value="{$cart['goods_num']}" readonly="readonly" type="text"/>
+
+                                                <a class="amount_plus"
+                                                ></a>
+                                            </div>
+
+                                        </li>
+
+                                        <li class="td td_sum">
+                                            <i class="price_sign">¥</i>
+                                            <span class="price_val">{$cart['goods_num']*$cart['goods_price']}
+                                            </span>
+                                        </li>
+
+                                        <li class="td td_op">
+                                            <div class="favorProd">
+
+                                                <a class="op_collect" pno="05474731" sno="05474731001" tno="0" p="539.00" href="#">收藏</a>
+                                                
+                                            </div>
+                                            <a class="op_delete" href="__APP__/Cart/del/id/{$cart['goods_id']}">删除</a>
+                                        </li>
+                                    </ul>
+                                
+                                    </foreach>
+                                    <else/>
+
+                                    <!-- 若未登录，遍历session 输出到购物车列表 -->
+                            		<foreach name="_SESSION['cartlist']" 
+                            		item="cart">
+                                    
+                                    <ul class="clr">
+                                        <li class="td td_chk">
+                                            <input id="box" class="checkList" type="checkbox">
+                                        </li>
+
+                                        <li class="td td_item">
+                                            <div class="td_item_img">
+                                                <a href="__APP__/Gdetail/index/id/{$cart['goods_id']}"  >
+                                                	<img style="opacity: 1;" src="__PUBLIC__/Uploads/{$cart['goods_pic']}" height="120" width="90"></a>
+                                            </div>
+
+                                            <div class="td_item_title clr">
+                                                <p>
+                                                    <a href="" >{$cart['goods_name']}</a>
+                                                </p>
+                                                <br/>
+                                                <p>
+                                                    <a href="">{$cart['goods_descr']}</a>
+                                                </p>
+                                                <br/>
+                                                <p class="padt5">
+                                                    <a href="">
+                                                        <span class="color" title="颜色:混合色 尺码:均码">
+                                                            <em>颜色</em>:混合色 <em>尺码</em>:均码
+                                                        </span>
+
+                                                    </a>
+                                                </p>
+                                            </div>
+                                        </li>
+
+                                        <li class="td td_price">
+                                            <em class="RedPromotional">
+                                                <i class="price_sign">¥</i>
+                                                <b class="price_new">{$cart['goods_price']}</b>
+                                            </em>
+                                        </li>
+
+                                        <li class="td td_amount">
+
+                                            <div class="amount_change" proid="201504141151505534">
+                                                <!-- 商品id -->
+                                                <input type="hidden" 
+                                                    name= "g_id" 
+                                                value="{$cart['goods_id']}"/>
+                                                <a class="amount_minus" 
+                                                ></a>
+
+                                                <input id="goods_num"
+                                                    name="g_num"
+                                                class="amount_val" name="" value="{$cart['goods_num']}" readonly="readonly" type="text"/>
+
+                                                <a class="amount_plus"
+                                                ></a>
+                                            </div>
+
+                                        </li>
+
+                                        <li class="td td_sum">
+                                            <i class="price_sign">¥</i>
+                                            <span class="price_val">{$cart['goods_num']*$cart['goods_price']}
+                                            </span>
+                                        </li>
+
+                                        <li class="td td_op">
+                                            <div class="favorProd">
+
+                                                <a class="op_collect" pno="05474731" sno="05474731001" tno="0" p="539.00" href="#">收藏</a>
+                                                
+                                            </div>
+                                            <a class="op_delete" href="#">删除</a>
+                                        </li>
+                                    </ul>
+								
+                                    </foreach>
+                                    </if>
+
+                            	</div>
+                           
+                            </div>
+                        </div>
+                    </div>
+                          
+                </div>
+
+                <div class="clr cart_bottom">
+                    <div class="cart_bottom_left">
+                        
+                        <div class="commodity_box">
+                            <div class="selectproduct_box">
+                                已选商品<em id="num">0</em>件
+                            </div>
+                        </div>
+                    </div>
+                    <div style="display: none;" class="error_prompt_mainland"></div>
+                    <div class="commodity_money new_commodity_money">
+                        商品金额：<i>¥</i><em id="sum">~</em>
+                    </div>
+                    <script type="text/javascript">
+                        //显示默认的总金额：
+                        var sum = 0;
+                        var price_val = document.getElementsByClassName("price_val");
+
+                        for(var i=0;i<price_val.length;i++){
+                            sum += parseFloat(price_val[i].innerHTML);
+                        }
+
+                        $("#sum").html(sum);
+                    </script>
+                    <div class="cart_bottom_right clr">
+                        <a class="return" href="__APP__/List/index">&lt;&nbsp;
+                        	继续购物</a>
+
+                        <div class="settlement_box settlement_box_ep_new">
+                            <a id="settlement_btn" 
+                            	href="javascript:submitForm()">
+                            立即结算</a>
+                        </div>
+                    </div>
+                    <script type="text/javascript">
+                    	function submitForm(){
+                    		$('form').submit();
+                    	}
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+    <div class="clr weixin_bottom">
+        <img src="__PUBLIC__/HOME/cart/wx_banner.jpg" height="80" width="310">
+    </div>
+</div>
+<script type="text/javascript">
+	//全选框：
+	$(".checkAllBtn").click(function(){
+		$(".checkList").prop("checked",function(i,val){
+			return !val;
+		});
+		$("#num").html(($(".checkList:checked").length));
+
+	});
+
+	$(".checkList").click(function(){
+		$("#num").html(($(".checkList:checked").length));
+	});
+
+	//减少按钮：
+	$(".amount_minus").click(function(){
+
+		var goods_num = $(this).next();
+        var s_total =   $(this).parent().parent().next().children("span");
+        var s_num = $(this).parent().parent().prev().children().children("b");
+
+		if(goods_num.val()>1){
+
+	        var m = parseInt(goods_num.val())-1;
+		    goods_num.val(m);
+
+		    var total =s_num.html()*m;
+		    s_total.html(total);
+
+            var sum = 0;
+            var price_val = document.getElementsByClassName("price_val");
+            for(var i=0;i<price_val.length;i++){
+                sum += parseFloat(price_val[i].innerHTML);
+            }
+            $("#sum").html(sum);
+
+            //通过ajax修改session中的商品数量：
+            var gid = $(this).prev().val();//获取商品id
+            //alert(gid);
+            var gnum = $(this).next().val();//获取商品数量
+            //alert(gnum);
+            $.post("__APP__/Cart/edit",{g_id:gid,g_num:gnum},function(){});
+
+		}
+
+	});
+	//增加按钮：
+	$(".amount_plus").click(function(){
+
+		var goods_num = $(this).prev();
+        var s_total =   $(this).parent().parent().next().children("span");
+        var s_num = $(this).parent().parent().prev().children().children("b");
+
+
+		var m = parseInt(goods_num.val())+1;
+		goods_num.val(m);
+
+		var total =s_num.html()*m;
+		s_total.html(total);	
+
+        var sum = 0;
+            var price_val = document.getElementsByClassName("price_val");
+            for(var i=0;i<price_val.length;i++){
+                sum += parseFloat(price_val[i].innerHTML);
+            }
+            $("#sum").html(sum);
+
+            //通过ajax修改session中的商品数量：
+            var gid = $(this).prev().prev().prev().val();//获取商品id
+            //alert(gid);
+            var gnum = $(this).prev().val();//获取商品数量
+            //alert(gnum);
+            $.post("__APP__/Cart/edit",{g_id:gid,g_num:gnum},function(){});
+
+	});
+</script>
+
+</block>
+   

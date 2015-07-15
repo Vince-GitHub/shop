@@ -1,0 +1,331 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"upd",
+				"SVN: Update"
+			],
+			[
+				"com",
+				"SVN: Commit…"
+			]
+		],
+		"width": 504.0
+	},
+	"console":
+	{
+		"height": 146.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/D/WWW/eduschool/404.html",
+		"/c/users/liqion~1/appdata/local/temp/sublime-svn-1432627979/SVN",
+		"/c/users/liqion~1/appdata/local/temp/sublime-svn-1432627904/SVN",
+		"/D/WWW/eduschool/school/index.php",
+		"/D/WWW/eduschool/index.html",
+		"/c/users/liqion~1/appdata/local/temp/sublime-svn-1432626062/SVN",
+		"/c/users/liqion~1/appdata/local/temp/sublime-svn-1432625923/SVN",
+		"/c/users/liqion~1/appdata/local/temp/sublime-svn-1432625851/SVN",
+		"/c/users/liqion~1/appdata/local/temp/sublime-svn-1432625800/SVN",
+		"/c/users/liqion~1/appdata/local/temp/sublime-svn-1432625735/SVN",
+		"/D/WWW/eduschool/edu/bk/index.php20150427",
+		"/D/WWW/eduschool/.htaccess",
+		"/D/WWW/eduschool/edu/enroll_way.php",
+		"/c/users/liqion~1/appdata/local/temp/sublime-svn-1432624983/SVN",
+		"/D/WWW/eduschool/stuwork_data.php",
+		"/D/WWW/eduschool/include/common.inc.php",
+		"/D/WWW/eduschool/dedeadminhxsd/templets/sys_verifies_manage.htm",
+		"/D/Program Files/Sublime Text 3/Data/Packages/Default/Default (Windows).sublime-keymap",
+		"/D/WWW/eduschool/js/floatInit.js",
+		"/D/WWW/eduschool/edu/classes.php",
+		"/D/WWW/eduschool/reflection_data.php",
+		"/D/WWW/eduschool/edu/index_beijing.html",
+		"/c/users/liqion~1/appdata/local/temp/sublime-svn-1432617000/SVN",
+		"/c/users/liqion~1/appdata/local/temp/sublime-svn-1432616899/SVN",
+		"/D/WWW/eduschool/advantage/advantage_alumni.html",
+		"/c/users/liqion~1/appdata/local/temp/sublime-svn-1432616644/SVN",
+		"/D/svn/live.html",
+		"/D/GraceLemon/Sublime Text 3/Data/Packages/User/SVN.errors.log",
+		"/D/svn/alipay/cacert.pem",
+		"/D/svn/advantage/style/css.css",
+		"/C/Users/liqiongbo/Desktop/brotherPHP/笔记/notes/commonSense_note/commonsense.html",
+		"/D/GraceLemon/Sublime Text 3/Data/Packages/Default/Default (Windows).sublime-keymap",
+		"/D/GraceLemon/Sublime Text 3/Data/Packages/Default/Preferences.sublime-settings",
+		"/D/Framework/symfony.phar",
+		"/C/Users/liqiongbo/Desktop/brotherPHP/笔记/notes/commonSense_note/笔试题commonsense.html",
+		"/D/Program Files (x86)/Apache Software Foundation/Apache2.2/htdocs/phpinfo.php",
+		"/C/Users/liqiongbo/Desktop/brotherPHP/项目/edusoho-5.5.8/edusoho/web/install/install.php",
+		"/D/test/php.ini",
+		"/C/Users/liqiongbo/Desktop/brotherPHP/笔记/notes/php-db_note/sql.html",
+		"/C/Users/liqiongbo/Desktop/brotherPHP/笔记/notes/thinkPHP_note/FlinkController.class.php",
+		"/C/Users/liqiongbo/Desktop/brotherPHP/笔记/notes/CodeIgniter/CI.html",
+		"/C/Users/liqiongbo/Desktop/brotherPHP/项目/shop_phaseII/Application/Admin/Controller/AdminController.class.php",
+		"/C/Users/liqiongbo/Documents/Tencent Files/472152022/FileRecv/525.html",
+		"/C/Users/liqiongbo/Desktop/brotherPHP/课堂作业/李琼波 JS_8/放大镜.html",
+		"/C/Users/liqiongbo/Desktop/brotherPHP/课堂作业/李琼波 JS_6/screen.html",
+		"/C/Users/liqiongbo/Desktop/brotherPHP/笔记/notes/html-css_note/html_css.html",
+		"/C/Users/liqiongbo/Desktop/helloPHP.cmd",
+		"/C/Users/liqiongbo/Desktop/shutdown.cmd",
+		"/D/Program Files (x86)/php-5.4.41-Win32-VC9-x86/php.ini",
+		"/D/WWW/phase2/php100_shop.sql",
+		"/D/test/changePHPversion5.4.cmd",
+		"/C/Users/liqiongbo/Desktop/brotherPHP/项目/TP/Application/public/jquery.js",
+		"/D/test/changePHPversion5.2.cmd",
+		"/D/Program Files (x86)/Apache Software Foundation/Apache2.2/conf/httpd_php5.2.conf",
+		"/D/Program Files (x86)/php-5.2.11-Win32/php.ini",
+		"/D/Program Files (x86)/php-5.2.11-Win32/php.ini-dist",
+		"/D/Program Files (x86)/Apache Software Foundation/Apache2.2/conf/httpd.conf",
+		"/C/Windows/System32/drivers/etc/hosts",
+		"/D/test/httpd_php5.2.conf",
+		"/D/Program Files (x86)/Apache Software Foundation/Apache2.2/bin/htpasswd.exe",
+		"/D/Program Files (x86)/php-5.2.17-nts-Win32-VC6-x86/php.ini",
+		"/D/test/changePHPversion.cmd",
+		"/D/Program Files (x86)/MySQL/MySQL Server 5.0/my.ini",
+		"/D/Program Files (x86)/Apache Software Foundation/change.php",
+		"/D/Program Files (x86)/Apache Software Foundation/Apache2.2/htdocs/edusoho-5.5.8/edusoho/web/app.php",
+		"/D/Program Files (x86)/Apache Software Foundation/Apache2.2/htdocs/edusoho-5.5.8/edusoho/web/app_dev.php",
+		"/D/Program Files (x86)/Apache Software Foundation/Apache2.2/htdocs/index.html",
+		"/C/Users/liqiongbo/Desktop/brotherPHP/项目/edusoho-5.5.8/edusoho/web/app.php",
+		"/C/Users/liqiongbo/Desktop/brotherPHP/项目/edusoho-5.5.8/edusoho/src/Custom/WebBundle/Resources/config/services.yml",
+		"/C/Users/liqiongbo/Desktop/brotherPHP/项目/edusoho-5.5.8/edusoho/README.html",
+		"/C/Users/liqiongbo/Desktop/brotherPHP/项目/edusoho-5.5.8/edusoho/app/Resources/views/base.html.twig",
+		"/C/Users/liqiongbo/Desktop/brotherPHP/项目/shop_phaseII/php100_shop.sql",
+		"/C/Users/liqiongbo/AppData/Local/Temp/360zip$Temp/360$1/edusoho/README.html",
+		"/D/Program Files (x86)/Apache Software Foundation/Apache2.2/htdocs/TP/Application/Home/Conf/config.php",
+		"/D/Program Files (x86)/Apache Software Foundation/Apache2.2/htdocs/TP/Application/Admin/Conf/config.php",
+		"/C/Windows/php.ini",
+		"/D/GraceLemon/Sublime Text 3/Data/Packages/User/conf.sublime-settings",
+		"/D/GraceLemon/Sublime Text 3/Data/Packages/User/Package Control.sublime-settings",
+		"/D/GraceLemon/Sublime Text 3/Data/Packages/User/Preferences.sublime-settings",
+		"/C/Users/liqiongbo/Desktop/brotherPHP/项目/TP/index.php",
+		"/D/GraceLemon/Sublime Text 3/Data/Packages/User/XXX.sublime-settings",
+		"/C/Users/liqiongbo/Desktop/brotherPHP/项目/TP/php100_shop.sql",
+		"/D/Program Files (x86)/Apache Software Foundation/Apache2.2/conf/extra/httpd-vhosts.conf",
+		"/C/Users/liqiongbo/Desktop/brotherPHP/笔记/notes/Apache+php+mysql/apache虚拟主机1.html",
+		"/C/Users/liqiongbo/Desktop/brotherPHP/笔记/notes/Apache+php+mysql/apache虚拟主机.html",
+		"/C/Users/liqiongbo/Desktop/brotherPHP/笔记/notes/Apache+php+mysql/AMP环境配置.html",
+		"/D/Program Files (x86)/Apache Software Foundation/Apache2.2/htdocs/index.php",
+		"/D/WWW/phase2/admin.php",
+		"/D/Program Files (x86)/mysql-5.6.24-win32.1432006610/mysql-5.6.24-win32/my.ini",
+		"/D/Program Files (x86)/php-5.5.25-nts-Win32-VC11-x64/php.ini",
+		"/D/Program Files (x86)/mysql-5.6.24-win32.1432006610/mysql-5.6.24-win32/my-default.ini",
+		"/D/testEnv/Apache24/conf/httpd.conf",
+		"/C/Users/liqiongbo/Desktop/brotherPHP/课件/lesson13_function/7.php",
+		"/C/Users/liqiongbo/Desktop/brotherPHP/课件/lesson13_function/8.php",
+		"/C/Users/liqiongbo/Desktop/brotherPHP/课件/lesson13_function/6.php",
+		"/C/Users/liqiongbo/Desktop/brotherPHP/课件/lesson13_function/5.php",
+		"/C/Users/liqiongbo/Desktop/brotherPHP/课件/lesson13_function/4.php",
+		"/C/Users/liqiongbo/Desktop/brotherPHP/课件/lesson13_function/2.php",
+		"/C/Users/liqiongbo/Desktop/brotherPHP/课件/lesson13_function/1.php",
+		"/C/Users/liqiongbo/Desktop/brotherPHP/课件/lesson27_mysql/1.php",
+		"/C/Users/liqiongbo/Desktop/brotherPHP/课件/lesson13_function/3.php",
+		"/C/Users/liqiongbo/Desktop/brotherPHP/课件/lesson14_function_array/1.php",
+		"/C/Users/liqiongbo/Desktop/brotherPHP/课件/lesson14_function_array/13.php",
+		"/C/Users/liqiongbo/Desktop/brotherPHP/课件/lesson14_function_array/3.php",
+		"/C/Users/liqiongbo/Desktop/brotherPHP/课件/lesson14_function_array/10.php",
+		"/C/Users/liqiongbo/Desktop/brotherPHP/课件/lesson14_function_array/12.php",
+		"/D/Sublime Text 3/Data/Packages/User/Preferences.sublime-settings",
+		"/C/Users/liqiongbo/Desktop/brotherPHP/课件/lesson14_function_array/5.php",
+		"/D/WWW/l.php",
+		"/C/Users/liqiongbo/Desktop/brotherPHP/课件/lesson14_function_array/functions.php",
+		"/C/Users/liqiongbo/Desktop/brotherPHP/个人作业/李琼波 lesson 16/1-2.php",
+		"/C/Users/liqiongbo/Desktop/brotherPHP/个人作业/李琼波 lesson 16/1-3.php",
+		"/C/Users/liqiongbo/Desktop/brotherPHP/个人作业/李琼波 lesson 16/1-1.php",
+		"/C/Users/liqiongbo/Desktop/brotherPHP/个人作业/李琼波 LESSON 10/3-10.php",
+		"/C/Users/liqiongbo/Desktop/brotherPHP/个人作业/李琼波 LESSON 10/1-5.php",
+		"/C/Users/liqiongbo/Desktop/brotherPHP/个人作业/李琼波 LESSON 10/1-1.php",
+		"/C/Users/liqiongbo/Desktop/brotherPHP/笔记/notes/html-css_note/html.html",
+		"/C/Users/liqiongbo/Desktop/brotherPHP/笔记/notes/CodeIgniter/vv.html.txt",
+		"/C/Users/liqiongbo/Desktop/brotherPHP/笔记/notes/CodeIgniter/CI.html.txt",
+		"/C/Users/liqiongbo/Desktop/brotherPHP/项目/TP/Application/Admin/Controller/UserController.class.php",
+		"/C/Users/liqiongbo/Desktop/brotherPHP/笔记/项目/php100_shop.sql",
+		"/C/Users/liqiongbo/Desktop/brotherPHP/项目/TP/Application/Admin/Controller/DetailController.class.php",
+		"/C/Users/liqiongbo/Desktop/brotherPHP/项目/TP/Application/Admin/View/Goods/index.html",
+		"/D/Sublime Text 3/Data/Packages/JSCS-Formatter/Default (Windows).sublime-keymap",
+		"/D/Sublime Text 3/Data/Packages/JSCS-Formatter/JSCS-Formatter.sublime-settings",
+		"/D/Sublime Text 3/Data/Packages/Emmet/Default (Linux).sublime-keymap",
+		"/D/WWW/phase2/Application/Home/Conf/config.php",
+		"/D/WWW/phase2/Application/Admin/Conf/config.php"
+	],
+	"find":
+	{
+		"height": 37.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"cgknowle",
+			"cgknowledge",
+			"edu",
+			"edus",
+			"eduschool",
+			"hxsd.test",
+			"$cfg_cmspath",
+			"enroll-way",
+			"classes",
+			"classes-3",
+			"enroll-payment.html",
+			"zend",
+			"D:\\Program Files (x86)\\php-5.2.17-nts-Win32-VC6-x86",
+			"D:\\Program Files (x86)\\php-5.4.41-Win32-VC9-x86",
+			"\\",
+			"extension",
+			"mysql",
+			"Vir",
+			"Virutal",
+			"NameVirutalHost *:80",
+			"Include etc/extra/httpd-vhosts.con",
+			"\\",
+			"register_global",
+			"extension=php_mysql.dll ",
+			"extension=php_dba.dll",
+			"register_globals",
+			"register_globals=Off",
+			"extension_dir",
+			"\\",
+			"disable_functions=\n",
+			"AddType application/x-gzip .gz .tgz",
+			"DirectoryIndex index.html ",
+			",\n"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"D:\\Program Files (x86)\\php-5.2.11-Win32",
+			"D:\\Program Files (x86)\\php-5.2.17-nts-Win32-VC6-x86",
+			"/"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 30.0
+	},
+	"input":
+	{
+		"height": 37.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"project": "index.sublime-project",
+	"replace":
+	{
+		"height": 68.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"svn",
+				"dedeadminhxsd\\templets\\sys_verifies_manage.htm"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 293.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

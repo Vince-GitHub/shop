@@ -1,0 +1,416 @@
+<extend name="Public:layout"/>
+<block name="main">
+
+    <link href="__PUBLIC__/HOME/sureOrder/ResourceHandler_003.css" rel="stylesheet" type="text/css">
+    <link href="__PUBLIC__/HOME/sureOrder/ResourceHandler_002.css" rel="stylesheet" type="text/css">
+    <link href="__PUBLIC__/HOME/sureOrder/ResourceHandler_004.css" rel="stylesheet" type="text/css">
+    <link href="__PUBLIC__/HOME/sureOrder/ResourceHandler.css" rel="stylesheet" type="text/css">
+
+    
+    <link href="__PUBLIC__/HOME/sureOrder/ResourceHandler_007.css" rel="stylesheet" type="text/css">
+    <link href="__PUBLIC__/HOME/sureOrder/ResourceHandler_005.css" rel="stylesheet" type="text/css">
+    <link href="__PUBLIC__/HOME/sureOrder/ResourceHandler_008.css" rel="stylesheet" type="text/css">
+    <link href="__PUBLIC__/HOME/sureOrder/ResourceHandler_006.css" rel="stylesheet" type="text/css">
+
+	
+<!--order Start-->
+<div class="clr box" >
+    <!--头部开始-->
+    <div class="clr">
+        <ul class="alCart_Step msh">
+            <li class="next">
+                <p>
+                    <em>1</em>我的购物袋
+                </p>
+                <span></span>
+            </li>
+            <li class="cur">
+                <p>
+                    <em>2</em>填写订单信息
+                </p>
+                <span></span>
+            </li>
+            <li class="last_step">
+                <p>
+                    <em>3</em>成功提交订单
+                </p>
+            </li>
+        </ul>
+    </div>
+    <div class="alCart_notice">
+        温馨提示：购物车中的商品无法保留库存，请您及时结算。
+    </div>
+</div>
+
+<div class="alOrder_Consignee" >
+        <!-- 收货信息 Start -->
+        <a id="firstAnchor"></a>
+        <h2 class="clr">
+                <span><i>1</i>收货信息</span>
+        </h2>
+
+        <!-- 默认收货地址 Start -->
+    <form action="__APP__/Order/insert" method="post">
+        <div class="olOrder_newConsignee borderbtm30">
+            
+            <div style="display: block;" class="new_Addr consignee_Addr">
+                <div class="myinfo_Notice">
+                    <span>默认收货地址</span>
+                </div>
+                
+
+                <div class="clr addr_form">
+                    <dl id="consnee_nameBox">
+                        <dt><em>*</em>&nbsp;收货人：</dt>
+                        <dd>
+                            <span>
+                                <input id="consnee_name" type="text" value="{$users['users_name']}" name="name">
+                            </span>
+                        </dd>
+                    </dl>
+          
+                    <dl>
+                        <dt><em>*</em>&nbsp;地&nbsp;&nbsp;&nbsp;&nbsp;址：</dt>
+                        <dd>
+                            <span class="normal_txt" id="consnee_topaddr"></span>
+                            <span class="big_txt">
+                            	<input id="consnee_addr" maxlength="30" type="text" value="{$users['users_address']}" name="address">
+                            </span>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt><em>*</em>&nbsp;邮&nbsp;&nbsp;&nbsp;&nbsp;编：</dt>
+                        <dd>
+                            <span>
+                                <input id="consnee_code" maxlength="6" type="text" value="{$users['users_code']}" name="code">
+                            </span>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt><em>*</em>&nbsp;手&nbsp;&nbsp;&nbsp;&nbsp;机：</dt>
+                        <dd>
+                            <span>
+                                <input id="consnee_mobile" maxlength="11" type="text" value="{$users['users_phone']}" name="phone">
+                            </span>
+                            <span class="normal_txt"></span>
+                        </dd>
+                    </dl>
+                   
+                </div>
+
+
+            </div>
+        </div>
+
+        <!-- 新增地址start -->
+    
+        <div class="olOrder_newConsignee borderbtm30">
+        	<div class="myinfo_Notice">
+	            <span onclick="add_hide()">&nbsp;<b>新增收货地址</b></span>
+		            <script type="text/javascript">
+		            	function add_hide(){
+		          			var div = document.getElementById("add_address");
+
+		          			if(div.style.display == "none"){
+		          				div.style.display = "block";
+		          			}else{
+		          				div.style.display = "none";
+		          			}
+		            	}
+		            </script>
+	            <em> ( 电话号码、手机号选填一项，其余为必填项 )</em>
+        	</div>
+            <div class="clr addr_form" id="add_address" style="display:none">
+
+            	<input id="consnee_id" type="hidden" value="{$users['users_id']}" name="userid">
+
+                <dl id="consnee_nameBox">
+                    <dt><em>*</em>&nbsp;收货人：</dt>
+                    <dd>
+                        <span>
+                            <input id="consnee_ne" type="text" 
+                                name="new_link">
+                        </span>
+                    </dd>
+                </dl>
+
+                <dl>
+                    <dt><em>*</em>&nbsp;地&nbsp;&nbsp;&nbsp;&nbsp;区：</dt>
+                    <dd>
+                        <select id="pro" name="pro">
+            
+            </select>
+            <select style="display:none" id="city" name="city">
+                
+            </select>
+            <select  style="display:none" name="county" id="county">
+               
+            </select>
+            <script type="text/javascript" charset="utf-8">
+                var c = ['中国','日本','广东','河南'];
+                var c_0 = ['昌平','海淀','丰台','朝阳'];
+                var c_1 = ['北海道','东海道','南海道'];
+                var c_2 = ['广州','深圳','东莞','佛山','清远','中山'];
+                var c_0_0 = ['回龙观','小沙河'];
+                var c_0_1 = ['三门峡','南阳','信阳'];
+                var c_0_2 = ['商丘','郑州','洛阳'];
+                var c_0_3 = ['中关村','五道口','上地'];
+                var pro = '<option>--请选择省--</option>';
+                var cindex;
+        		
+        		for(var i = 0;i<c.length;i++){
+        			pro += "<option value = '"+i+"'>"+c[i]+"</option>";
+        		}
+        		$("#pro").html(pro);
+        		
+        		$("#pro").change(function(){
+        			$("#city").show();
+        			cindex = $("#pro>option:selected").val();
+        			var c = 'c_'+cindex;
+        			var city = "<option>--请选择市--</option>";
+        			var cc = eval(c);
+        			for(var i=0;i<cc.length;i++){
+        				city += "<option value = '"+i+"'>"+cc[i]+"</option>";
+        			}
+        			$("#city").html(city);
+        		});
+        		
+        		$("#city").change(function(){
+        			$("#county").show();
+        			var index = $("#city>option:selected").val();
+        			var c = 'c_'+cindex+"_"+index;
+        			var cc = eval(c);
+        			var county = "<option value=''>--请选择县/区--</option>";
+        			for(var i in cc){
+        			county += "<option value='"+i+"'>"+cc[i]+"</option>";
+        			}
+
+        			$("#county").html(county);
+        		});
+            </script>
+                    </dd>
+                </dl>
+
+                <dl>
+                    <dt><em>*</em>&nbsp;地&nbsp;&nbsp;&nbsp;&nbsp;址：</dt>
+                    <dd>
+                        <span class="normal_txt" id="consnee_topaddr"></span>
+                        <span class="big_txt">
+                        	<input id="consnee_ar" maxlength="30" type="text" name="new_add">
+                        </span>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt><em>*</em>&nbsp;邮&nbsp;&nbsp;&nbsp;&nbsp;编：</dt>
+                    <dd>
+                        <span>
+                            <input id="consnee_co" maxlength="6" type="text"
+                                name="new_code">
+                        </span>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt><em>*</em>&nbsp;手&nbsp;&nbsp;&nbsp;&nbsp;机：</dt>
+                    <dd>
+                        <span>
+                            <input id="consnee_ph" maxlength="11" type="text" name="new_phone">
+                        </span>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt></dt>
+                    <dd>
+                        <input value="保存" id="save" class="submit_Btn"  type="button" 
+                        	style="width:130px">
+                        <i class="form_succeed" style="display: none;">保存成功</i>
+                        <input value="重置" class="cancel_Btn" type="reset">
+                    </dd>
+                </dl>
+            </div>
+        </div>
+        <!-- 新增收货地址 End -->
+		<script type="text/javascript">
+			$("#save").click(function(){
+
+				var userid = $("#consnee_id").val();
+				var address = $("#consnee_ar").val();
+				var name = $("#consnee_ne").val();
+				var phone = $("#consnee_ph").val();
+				var code = $("#consnee_co").val();
+
+				$.post("__APP__/Profiles/add_pro",{userid:userid,address:address,name:name,phone:phone,code:code});
+				$(".form_succeed").attr("style","display:block");
+			});
+		</script>
+        <!-- 送货时间信息 Start -->
+        <h2 class="clr borderTop">
+            <span><i>2</i>送货时间</span>
+        </h2>
+        <dl class="olOrder_express">
+            <dd>
+                <label for="allDay" class="order_express curr">
+                    <input checked="checked" name="express" id="allDay" type="radio" value="0">所有日期均可收货
+                </label>
+                <label for="workDay" class="order_express">
+                    <input name="express" id="workDay" type="radio" value="1">工作日收货
+                </label>
+                <label for="holiDay" class="order_express">
+                    <input name="express" id="holiDay" type="radio" value="2">双休日、节假日收货
+                </label>
+            </dd>
+            <dd class="padT15">
+                配送方式：快递发送（单笔订单支付金额满499元免运费）
+            </dd>
+        </dl>
+
+        <!-- 发票信息 Start -->
+        <h2 class="clr borderTop">
+            <span><i>3</i>发票信息</span>
+        </h2>
+            <div class="clr olOrder_invoice_wp">
+                <dl class="olOrder_invoice">
+                    <h3>
+                        <i class="txt_margin">发票类型：</i>
+                        <label for="invoice_yes">
+                            <input name="invoice" id="invoice_yes" value="0" type="radio">普通发票
+                        </label>
+                        <label for="invoice_no">
+                            <input checked="checked" name="invoice" id="invoice_no" value="1" type="radio">不开发票
+                        </label>
+                    </h3>
+                </dl>  
+            </div>  
+            <hr color="#ccc"/>
+
+        <!-- 商品清单 Start -->
+        <h2 class="clr  borderTop">
+            <span><i>4</i>商品清单</span><a href="__APP__/cart">&lt;&nbsp;返回修改购物车</a>
+        </h2>
+    
+
+        <div id="divtest">
+            <div class="alCart_proList order_list">
+                <div class="alCart_proList_th">
+                    <ul class="clr">
+                        <li class="th_item">商品名称</li>
+                        <li class="th_price">商品价格</li>
+                        <li class="th_amount">数量</li>
+                        <li class="th_sum">小计</li>
+                    </ul>
+                </div>
+                <hr color="#ccc"/>   
+                <div class="alCart_proList_content" id="alCart_proList_content">
+        <!-- 遍历session 输出到购物车列表 -->
+                    <foreach name="_SESSION['cartlist']" 
+                    item="cart">
+                    
+                    <ul class="clr">
+                       
+                        <li class="td td_item">
+                            <div class="td_item_img">
+                                <a href="__APP__/Gdetail/index/id/{$cart['goods_id']}"  >
+                                    <img style="opacity: 1;" src="__PUBLIC__/Uploads/{$cart['goods_pic']}" height="120" width="90"></a>
+                            </div>
+
+                            <div class="td_item_title clr">
+                                <p>
+                                    <a href="" >{$cart['goods_name']}</a>
+                                </p>
+                                <br/>
+                                <p>
+                                    <a href="">{$cart['goods_descr']}</a>
+                                </p>
+                                <br/>
+                                <p class="padt5">
+                                    <a href="">
+                                        <span class="color" title="颜色:混合色 尺码:均码">
+                                            <em>颜色</em>:混合色 <em>尺码</em>:均码
+                                        </span>
+
+                                    </a>
+                                </p>
+                            </div>
+                        </li>
+
+                        <li class="td td_price">
+                            <em class="RedPromotional">
+                                <i class="price_sign">¥</i>
+                                <b class="price_new">{$cart['goods_price']}</b>
+                            </em>
+                        </li>
+
+                        <li class="td td_amount">
+
+                            <div class="amount_change" proid="
+                                201504141151505534" style="margin-top:55px">
+                                
+                             {$cart['goods_num']}
+                                
+                            </div>
+
+                        </li>
+
+                        <li class="td td_sum">
+                            <i class="price_sign">¥</i>
+                            <span class="price_val">{$cart['goods_num']*$cart['goods_price']}
+                            </span>
+                        </li>
+
+                       
+                    </ul>
+                
+                    </foreach>
+
+                </div>
+            </div>
+            <!-- 商品清单 End -->
+
+
+            <div class="alCart_total">
+                <div class="hasprod clr">
+                    <div>
+                        商品总金额：<b style="color:#ff69b4">￥</b>
+                        <input type="text" name="sum" value="55" size="10" 
+                        id="sum" style="border:none;color:gray" readonly />
+                	</div>
+            	</div>
+        	</div>
+        </div>
+    
+
+        <div class="order_bottom_pay">
+            <a class="return" href="__APP__/cart">&lt;&nbsp;返回修改购物车 </a>
+        	<a style="display: block;" href="javascript:submitForm()" 
+                class="paySubmit_btn" 
+        		id="paySubmit_btn">确认提交</a>
+            <div class="gifts_pay payTotal">
+                应付总额:
+        		<em class="redTxt">¥<i id="actualAmount" class="actualAmount">8439</i></em>
+            </div>
+        </div>  
+
+    </form>
+
+</div>
+
+    <div style="height:10px" class="error_message" id="error_message"></div>
+</div>
+<!--order End-->
+<br/><br/>
+<script type="text/javascript">
+    function submitForm(){
+        $("form").submit();
+    }
+
+    var m = 0;
+    var price_val = document.getElementsByClassName("price_val");
+    for(var i=0;i<price_val.length;i++){
+        m += parseFloat(price_val[i].innerHTML);
+    
+    }
+
+    $("#actualAmount").html(m);
+    $("#sum").val(m);
+</script>
+
+</block>
