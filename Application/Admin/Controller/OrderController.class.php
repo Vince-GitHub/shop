@@ -39,7 +39,7 @@ class OrderController extends Controller {
 				$goods ->save($good);
 			}
 
-			$this -> success("成功发货",order/index);
+			$this -> success("恭喜！已经成功发货",order/index);
     	
     	
     }
